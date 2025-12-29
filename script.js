@@ -268,20 +268,54 @@ function showImagePopup(imageUrl) {
 // Görseli indir
 async function downloadImage(imageUrl) {
     try {
-        const response = await fetch(imageUrl);
+        // CORS sorunlarını aşmak için fetch ile blob olarak indir
+        const response = await fetch(imageUrl, {
+            mode: 'cors',
+            cache: 'no-cache'
+        });
+        
+        if (!response.ok) {
+            throw new Error('İndirme başarısız');
+        }
+        
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
+        a.style.display = 'none';
         a.href = url;
-        a.download = `ai-generated-${Date.now()}.png`;
+        a.download = `ai-generated-image-${Date.now()}.png`;
+        
+        // DOM'a ekle, tıkla ve kaldır
         document.body.appendChild(a);
         a.click();
-        document.body.removeChild(a);
-        window.URL.revokeObjectURL(url);
+        
+        // Temizlik
+        setTimeout(() => {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 100);
+        
+        // Kullanıcıya geri bildirim
+        alert('Görsel başarıyla indirildi!');
+        
     } catch (error) {
         console.error('İndirme hatası:', error);
-        // Fallback: yeni sekmede aç
-        window.open(imageUrl, '_blank');
+        
+        // Fallback 1: Doğrudan link ile dene
+        try {
+            const a = document.createElement('a');
+            a.href = imageUrl;
+            a.download = `ai-generated-image-${Date.now()}.png`;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        } catch (fallbackError) {
+            // Fallback 2: Yeni sekmede aç
+            window.open(imageUrl, '_blank');
+            alert('Otomatik indirme başarısız oldu. Görsele sağ tıklayıp "Resmi farklı kaydet" seçeneğini kullanabilirsiniz.');
+        }
     }
 }
 
