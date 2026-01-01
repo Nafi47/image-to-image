@@ -57,11 +57,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // API'ye görsel gönderme fonksiyonu
 async function sendImageToAPI(base64Image) {
+    const secondCard = document.querySelector('.card-2');
+    if (!secondCard) {
+        console.error('Görsel alanı bulunamadı.');
+        return;
+    }
+
+    let loadingOverlay = null;
+
     try {
-        // Yükleniyor mesajı
-        const secondCard = document.querySelector('.card-2');
-        const loadingHTML = secondCard.innerHTML;
-        secondCard.innerHTML += '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); color: white; padding: 20px; border-radius: 10px;">İşleniyor...</div>';
+        loadingOverlay = showLoadingOverlay(secondCard);
+        toggleUploadButtonState(true);
         
         const payload = {
             init_image: [
@@ -107,10 +113,7 @@ async function sendImageToAPI(base64Image) {
         console.log('Image URL:', imageUrl);
         
         if (imageUrl) {
-            // Küçük önizlemeyi göster
-            secondCard.innerHTML = `<img src="${imageUrl}" alt="Generated" style="width: 100%; height: 100%; object-fit: cover;">`;
-            
-            // Popup ile büyük görseli göster
+            await renderGeneratedImage(imageUrl, secondCard);
             showImagePopup(imageUrl);
         } else {
             console.error('Tam API yanıtı:', result);
@@ -121,9 +124,87 @@ async function sendImageToAPI(base64Image) {
         console.error('API Error:', error);
         alert('Görsel işlenirken bir hata oluştu: ' + error.message + '\n\nKonsolu (F12) kontrol edin.');
         // Yükleme mesajını kaldır
-        const secondCard = document.querySelector('.card-2');
-        secondCard.innerHTML = '<div class="placeholder">Hata oluştu</div>';
+        if (secondCard) {
+            secondCard.innerHTML = '<div class="placeholder">Hata oluştu</div>';
+        }
+    } finally {
+        hideLoadingOverlay(secondCard, loadingOverlay);
+        toggleUploadButtonState(false);
     }
+}
+
+function showLoadingOverlay(target) {
+    if (!target) {
+        return null;
+    }
+
+    const overlay = document.createElement('div');
+    overlay.className = 'loading-overlay';
+    overlay.innerHTML = `
+        <div class="loading-content">
+            <span class="loading-label">AI sahneyi hazırlıyor</span>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <span class="loading-hint">Işıklar ve gölgeler hizalanıyor</span>
+        </div>
+    `;
+
+    target.classList.add('is-loading');
+    target.appendChild(overlay);
+    requestAnimationFrame(() => overlay.classList.add('visible'));
+    return overlay;
+}
+
+function hideLoadingOverlay(target, overlay) {
+    if (!overlay) {
+        return;
+    }
+
+    overlay.classList.add('hide');
+    const removeOverlay = () => {
+        overlay.removeEventListener('transitionend', removeOverlay);
+        if (overlay.parentNode) {
+            overlay.parentNode.removeChild(overlay);
+        }
+        if (target) {
+            target.classList.remove('is-loading');
+        }
+    };
+
+    overlay.addEventListener('transitionend', removeOverlay);
+    setTimeout(removeOverlay, 500);
+}
+
+function toggleUploadButtonState(isDisabled) {
+    const uploadBtn = document.querySelector('.btn-upload');
+    if (!uploadBtn) {
+        return;
+    }
+    uploadBtn.disabled = isDisabled;
+    uploadBtn.classList.toggle('is-disabled', Boolean(isDisabled));
+}
+
+function renderGeneratedImage(imageUrl, container) {
+    return new Promise((resolve, reject) => {
+        if (!container) {
+            reject(new Error('Görsel alanı bulunamadı.'));
+            return;
+        }
+
+        const generatedImg = new Image();
+        generatedImg.src = imageUrl;
+        generatedImg.alt = 'Generated result';
+        generatedImg.style.cssText = 'width: 100%; height: 100%; object-fit: cover; display: block;';
+        generatedImg.onload = () => {
+            container.innerHTML = '';
+            container.appendChild(generatedImg);
+            resolve();
+        };
+        generatedImg.onerror = () => {
+            reject(new Error('Görsel yüklenemedi.'));
+        };
+    });
 }
 
 // Popup ile görseli göster
