@@ -265,25 +265,43 @@ function showImagePopup(imageUrl) {
     const modalContent = document.createElement('div');
     modalContent.style.cssText = `
         position: relative;
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 90vw;
+        max-height: 90vh;
         background: #1a2520;
         border-radius: 20px;
         padding: 20px;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     `;
     
     // Görsel
     const img = document.createElement('img');
-    img.src = imageUrl;
     img.style.cssText = `
-        max-width: 800px;
-        max-height: 600px;
-        width: 100%;
-        height: auto;
         border-radius: 10px;
         display: block;
+        width: auto;
+        height: auto;
+        max-width: 90vw;
+        max-height: 70vh;
     `;
+    img.onload = () => {
+        const viewportW = window.innerWidth * 0.9;
+        const viewportH = window.innerHeight * 0.85;
+        const scale = Math.min(
+            viewportW / img.naturalWidth,
+            viewportH / img.naturalHeight,
+            1
+        );
+        const displayW = Math.floor(img.naturalWidth * scale);
+        const displayH = Math.floor(img.naturalHeight * scale);
+        img.style.width = `${displayW}px`;
+        img.style.height = `${displayH}px`;
+        const adjustedWidth = Math.min(displayW + 40, viewportW);
+        modalContent.style.width = `${adjustedWidth}px`;
+    };
+    img.src = imageUrl;
     
     // Buton container
     const btnContainer = document.createElement('div');
