@@ -12,6 +12,10 @@ body {
     overflow-x: hidden;
 }
 
+body.loading-active {
+    overflow: hidden;
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -219,75 +223,77 @@ header {
     pointer-events: none;
 }
 
-.loading-overlay {
-    position: absolute;
+.full-screen-loader {
+    position: fixed;
     inset: 0;
-    background: rgba(5, 8, 7, 0.88);
-    background-image: radial-gradient(circle at 20% 20%, rgba(196, 255, 0, 0.12), transparent 60%);
+    background: radial-gradient(circle at 20% 20%, rgba(196, 255, 0, 0.12), transparent 55%), rgba(4, 7, 6, 0.92);
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(12px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    backdrop-filter: blur(18px);
+    z-index: 2000;
     opacity: 0;
-    transform: scale(0.96);
-    z-index: 5;
+    transform: scale(0.98);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.loading-overlay.visible {
+.full-screen-loader.visible {
     opacity: 1;
     transform: scale(1);
 }
 
-.loading-overlay.hide {
+.full-screen-loader.hide {
     opacity: 0;
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
-.loading-content {
-    width: 80%;
-    max-width: 240px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.loader-panel {
+    width: min(420px, 80vw);
+    background: rgba(12, 18, 16, 0.95);
+    border: 1px solid rgba(196, 255, 0, 0.25);
+    border-radius: 24px;
+    padding: 32px 36px;
     text-align: center;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
 }
 
-.loading-label {
-    font-size: 13px;
-    letter-spacing: 2px;
+.loader-title {
+    font-size: 16px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: #c4ff00;
+    margin-bottom: 18px;
 }
 
-.loading-bar {
+.loader-bar {
     position: relative;
     width: 100%;
-    height: 6px;
+    height: 10px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.12);
     overflow: hidden;
+    margin-bottom: 18px;
 }
 
-.loading-progress {
+.loader-progress {
     position: absolute;
     inset: 0;
-    width: 40%;
+    width: 35%;
     border-radius: 999px;
-    background: linear-gradient(90deg, #c4ff00, #80ff72, #c4ff00);
-    box-shadow: 0 0 20px rgba(196, 255, 0, 0.6);
-    animation: loadingPulse 1.4s ease-in-out infinite;
+    background: linear-gradient(90deg, #c4ff00, #8cff66, #c4ff00);
+    box-shadow: 0 0 25px rgba(196, 255, 0, 0.6);
+    animation: loaderSweep 1.6s ease-in-out infinite;
 }
 
-.loading-hint {
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: rgba(255, 255, 255, 0.6);
+.loader-hint {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-@keyframes loadingPulse {
+@keyframes loaderSweep {
     0% { transform: translateX(-120%); }
-    50% { transform: translateX(10%); }
+    50% { transform: translateX(5%); }
     100% { transform: translateX(120%); }
 }
 

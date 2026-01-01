@@ -133,47 +133,82 @@ async function sendImageToAPI(base64Image) {
     }
 }
 
+const loaderMessages = [
+    'AI sahneyi hazırlıyor',
+    'Az kaldı',
+    'Neredeyse hazır',
+    'Bitmek üzere'
+];
+let loaderIntervalId = null;
+
 function showLoadingOverlay(target) {
-    if (!target) {
-        return null;
+    if (target) {
+        target.classList.add('is-loading');
     }
 
     const overlay = document.createElement('div');
-    overlay.className = 'loading-overlay';
+    overlay.className = 'full-screen-loader';
     overlay.innerHTML = `
-        <div class="loading-content">
-            <span class="loading-label">AI sahneyi hazırlıyor</span>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
+        <div class="loader-panel">
+            <span class="loader-title">Görsel hazırlanıyor</span>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
             </div>
-            <span class="loading-hint">Işıklar ve gölgeler hizalanıyor</span>
+            <span class="loader-hint">${loaderMessages[0]}</span>
         </div>
     `;
 
-    target.classList.add('is-loading');
-    target.appendChild(overlay);
+    document.body.appendChild(overlay);
+    document.body.classList.add('loading-active');
     requestAnimationFrame(() => overlay.classList.add('visible'));
+    const hintElement = overlay.querySelector('.loader-hint');
+    startLoaderMessaging(hintElement);
     return overlay;
 }
 
 function hideLoadingOverlay(target, overlay) {
-    if (!overlay) {
-        return;
-    }
-
-    overlay.classList.add('hide');
-    const removeOverlay = () => {
-        overlay.removeEventListener('transitionend', removeOverlay);
-        if (overlay.parentNode) {
+    const cleanup = () => {
+        stopLoaderMessaging();
+        if (overlay && overlay.parentNode) {
             overlay.parentNode.removeChild(overlay);
         }
         if (target) {
             target.classList.remove('is-loading');
         }
+        document.body.classList.remove('loading-active');
     };
 
-    overlay.addEventListener('transitionend', removeOverlay);
-    setTimeout(removeOverlay, 500);
+    if (!overlay) {
+        cleanup();
+        return;
+    }
+
+    overlay.classList.add('hide');
+    overlay.addEventListener('transitionend', cleanup, { once: true });
+    setTimeout(cleanup, 600);
+}
+
+function startLoaderMessaging(targetElement) {
+    if (!targetElement) {
+        return;
+    }
+
+    stopLoaderMessaging();
+    let messageIndex = 0;
+    targetElement.textContent = loaderMessages[messageIndex];
+    loaderIntervalId = setInterval(() => {
+        if (messageIndex < loaderMessages.length - 1) {
+            messageIndex += 1;
+        }
+        targetElement.textContent = loaderMessages[messageIndex];
+    }, 2800);
+}
+
+function stopLoaderMessaging() {
+    if (loaderIntervalId) {
+        clearInterval(loaderIntervalId);
+        loaderIntervalId = null;
+    }
 }
 
 function toggleUploadButtonState(isDisabled) {
