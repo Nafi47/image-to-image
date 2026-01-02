@@ -3,29 +3,27 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Upload Image butonu
     const uploadBtn = document.querySelector('.btn-upload');
+    const uploadInput = createPersistentUploadInput();
+
     uploadBtn.addEventListener('click', function() {
-        const input = document.createElement('input');
-        input.type = 'file';
-        input.accept = 'image/*';
-        input.onchange = async function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                // Önce önizleme göster
-                const reader = new FileReader();
-                reader.onload = async function(event) {
-                    const base64Image = event.target.result;
-                    
-                    // Önizlemeyi göster
-                    const secondCard = document.querySelector('.card-2');
-                    secondCard.innerHTML = `<img src="${base64Image}" style="width: 100%; height: 100%; object-fit: cover;">`;
-                    
-                    // API'ye gönder
-                    await sendImageToAPI(base64Image);
-                };
-                reader.readAsDataURL(file);
-            }
+        uploadInput.value = '';
+        uploadInput.click();
+    });
+
+    uploadInput.addEventListener('change', async function(e) {
+        const file = e.target.files[0];
+        if (!file) {
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = async function(event) {
+            const base64Image = event.target.result;
+            const secondCard = document.querySelector('.card-2');
+            secondCard.innerHTML = `<img src="${base64Image}" style="width: 100%; height: 100%; object-fit: cover;">`;
+            await sendImageToAPI(base64Image);
         };
-        input.click();
+        reader.readAsDataURL(file);
     });
 
     // Kart hover animasyonları
@@ -54,6 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
         rightSection.style.transform = 'translateX(0)';
     }, 300);
 });
+
+function createPersistentUploadInput() {
+    // Keep a hidden input in the DOM so file change events fire consistently across browsers.
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.style.display = 'none';
+    document.body.appendChild(input);
+    return input;
+}
 
 // API'ye görsel gönderme fonksiyonu
 async function sendImageToAPI(base64Image) {
