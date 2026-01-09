@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pixgix Ai image generator HTML website template – Generate stunning AI-powered images instantly with our advanced AI image generator. Perfect for artists, designers, and businesses. Fast, high-quality, and easy to use.">
+    <meta name="keywords" content="AI image generator, image generation, AI art, digital">
+    <!-- Title -->
+    <title>PixgiX- Ai image Generator HTML Template</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.ico">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Odometer -->
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <!-- Custom Animation -->
+    <link rel="stylesheet" href="assets/css/custom-animation.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+    <!-- ===========================
+    =====>> Preloader <<======= -->
+    <div id="preloader">
+        <div id="text">
+            <p>P</p>
+            <p>i</p>
+            <p>x</p>
+            <p>g</p>
+            <p>i</p> 
+            <p class="active">X</p>
+        </div>
+    </div>
+    <!-- =====>> End Preloader <<=====
+    =========================== -->
+
+    <!-- ===========================
+    =====>> Scroll back to top <<===== -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- =====>> End Scroll back to top <<===== 
+    =========================== -->
+    <!-- ===========================
+    =====>> navbar <<===== -->
+    <nav class="navbar navbar-expand-lg navbar-main">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/logo.svg" alt="logo" class="logo-img">
+            </a>
+            <div class="right-nav">
+                <a href="cart.html" class="card___btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.7605 21.24C17.089 21.24 17.3552 20.9774 17.3552 20.6533C17.3552 20.3293 17.089 20.0667 16.7605 20.0667C16.432 20.0667 16.1658 20.3293 16.1658 20.6533C16.1658 20.9774 16.432 21.24 16.7605 21.24ZM16.7605 23C18.0743 23 19.1394 21.9493 19.1394 20.6533C19.1394 19.3574 18.0743 18.3067 16.7605 18.3067C15.4467 18.3067 14.3816 19.3574 14.3816 20.6533C14.3816 21.9493 15.4467 23 16.7605 23Z"
+                            fill="white"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.6237 21.24C9.95217 21.24 10.2184 20.9774 10.2184 20.6533C10.2184 20.3293 9.95217 20.0667 9.6237 20.0667C9.29523 20.0667 9.02896 20.3293 9.02896 20.6533C9.02896 20.9774 9.29523 21.24 9.6237 21.24ZM9.6237 23C10.9375 23 12.0026 21.9493 12.0026 20.6533C12.0026 19.3574 10.9375 18.3067 9.6237 18.3067C8.30987 18.3067 7.24477 19.3574 7.24477 20.6533C7.24477 21.9493 8.30987 23 9.6237 23Z"
+                            fill="white"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.14992 1.39195C1.42322 0.987572 1.9771 0.8783 2.38704 1.14789L3.77635 2.06152C4.22008 2.35331 4.53332 2.80196 4.65149 3.31492L7.09912 13.9384C7.25297 14.6061 7.85478 15.08 8.54902 15.08H17.8352C18.5295 15.08 19.1313 14.6061 19.2851 13.9384L21.1775 5.72513C21.3889 4.80735 20.6817 3.9334 19.7276 3.9334H10.5158C10.0231 3.9334 9.6237 3.53942 9.6237 3.05342C9.6237 2.56741 10.0231 2.17342 10.5158 2.17342H19.7276C21.8267 2.17342 23.3825 4.09602 22.9173 6.11514L21.025 14.3284C20.6864 15.7975 19.3625 16.84 17.8352 16.84H8.54902C7.02174 16.84 5.69775 15.7975 5.35929 14.3284L2.91166 3.70495C2.89478 3.6317 2.85003 3.5676 2.78664 3.52591L1.39735 2.61229C0.987401 2.3427 0.876626 1.79634 1.14992 1.39195Z"
+                            fill="white"></path>
+                    </svg>
+                    <div class="card-number">
+                        3
+                    </div>
+                </a>
+                <a href="login.html" class="btn btn--border">
+                    Login
+                </a>
+                <a href="register.html" class="btn btn--base">
+                    Sign Up
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        <img src="assets/images/logo/logo.svg" alt="logo" class="logo-img">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="d-flex d-lg-none gap-4 pt-3 justify-content-center">
+                    <a href="login.html" class="btn btn--border">
+                        Login
+                    </a>
+                    <a href="register.html" class="btn btn--base">
+                        Sign Up
+                    </a>
+                </div>
+                <div class="offcanvas-body align-items-center">
+                    <ul class="navbar-nav justify-content-center flex-grow-1">
+                        <li class="nav-item dropdown has-megamenu">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                aria-expanded="false">Home</a>
+                            <ul class="dropdown-menu fade-down">
+                                <li><a class="dropdown-item" href="index.html">Home One</a></li>
+                                <li><a class="dropdown-item" href="index-two.html">Home Two</a></li>
+                                <li><a class="dropdown-item" href="index-three.html">Home Three</a></li> 
+                                
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"><span>About Us</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Shops
+                            </a>
+                            <ul class="dropdown-menu fade-down">
+                                <li><a class="dropdown-item" href="prompts.html">Prompts</a></li>
+                                <li><a class="dropdown-item" href="product-details.html">Product Details</a></li>
+                                <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+                                <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+                                <li><a class="dropdown-item" href="seller.html">Sellers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu fade-down">
+                                <li><a class="dropdown-item" href="generator.html">Image Generator</a></li>
+                                <li><a class="dropdown-item" href="services.html">Our Services</a></li>
+                                <li><a class="dropdown-item" href="pricing.html">Pricing Plan</a></li>
+                                <li><a class="dropdown-item" href="collection.html">Collections</a></li>
+                                <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="faq.html">F.A.Q</a></li>
+                                <li><a class="dropdown-item" href="404.html">404</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Blog
+                            </a>
+                            <ul class="dropdown-menu fade-down">
+                                <li><a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
+                                <li><a class="dropdown-item" href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                <li><a class="dropdown-item" href="blog-standard.html">Blog Standard</a></li>
+                                <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html"><span>Contacts</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- =====>> End navbar <<===== 
+    =========================== -->
+    <main>
+        <!-- ===========================
+        =====>> breadcrumb <<======= -->
+        <section class="breadcrumb">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="breadcrumb__wrapper">
+                            <h2 class="breadcrumb__title">Top Sellers</h2>
+                            <ul class="breadcrumb__list">
+                                <li class="breadcrumb__item">
+                                    <a href="index.html"> Home</a>
+                                </li>
+                                <li class="breadcrumb__item">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </li>
+                                <li class="breadcrumb__item">
+                                    <span class="breadcrumb__item-text"> Sellers</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =====>> End breadcrumb <<===== 
+        =============================== -->
+        <!-- ===========================
+        =====>> Feature <<======= -->
+        <section class="feature-three-section py-120">
+            <div class="container">
+                <div class="row row-gap-4 justify-content-center">
+                    <div class="col-xl-3 col-lg-4 col-md-6 top-reveal">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-img">
+                                    <img src="assets/images/user/f1.png" alt="user">
+                                    <svg class="profile-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <ellipse cx="12.0001" cy="11.5386" rx="6.46154" ry="6" fill="#F9F9F9" />
+                                        <path
+                                            d="M22.5876 14.3063C22.1159 13.5725 21.6441 12.8649 21.1724 12.1311C21.0676 11.9739 21.0676 11.8691 21.1724 11.7118C21.6441 11.0042 22.0897 10.2967 22.5614 9.58907C23.1117 8.75045 22.8235 7.93803 21.88 7.59734C21.0938 7.30906 20.3076 6.99458 19.5214 6.70631C19.3641 6.65389 19.2855 6.54907 19.2855 6.36562C19.2593 5.50079 19.2069 4.63596 19.1545 3.79734C19.1021 2.8801 18.3945 2.35596 17.5035 2.59182C16.6648 2.80148 15.8262 3.03734 15.0138 3.2732C14.8304 3.32562 14.7255 3.2732 14.5945 3.14217C14.0704 2.46079 13.52 1.80562 12.9959 1.15044C12.4193 0.416649 11.5283 0.416649 10.9255 1.15044C10.4014 1.80562 9.85104 2.46079 9.35311 3.11596C9.22208 3.29941 9.09105 3.32562 8.88139 3.2732C8.06897 3.03734 7.25656 2.82769 6.68001 2.67044C5.55311 2.40837 4.87174 2.85389 4.81932 3.79734C4.76691 4.66217 4.7145 5.527 4.68829 6.41803C4.68829 6.60148 4.60967 6.6801 4.45243 6.75872C3.64001 7.0732 2.8276 7.38768 2.01518 7.70217C1.17656 8.04286 0.914496 8.85527 1.41243 9.61527C1.88415 10.3491 2.35588 11.0567 2.8276 11.7904C2.93242 11.9477 2.93242 12.0525 2.8276 12.236C2.32967 12.9698 1.85794 13.7036 1.38622 14.4635C0.9407 15.1711 1.22897 16.0098 2.01518 16.3242C2.8276 16.6387 3.66622 16.9532 4.47863 17.2677C4.66207 17.3201 4.71449 17.4249 4.71449 17.6084C4.7407 18.447 4.84552 19.2594 4.84552 20.098C4.84552 20.9367 5.57932 21.6967 6.60138 21.3822C7.4138 21.1201 8.22621 20.9366 9.03863 20.7008C9.19587 20.6484 9.30069 20.6746 9.40552 20.8318C9.95587 21.5132 10.48 22.1684 11.0303 22.8498C11.6331 23.5835 12.4979 23.5835 13.0745 22.8498C13.6248 22.1684 14.149 21.5132 14.6993 20.8318C14.8041 20.7008 14.8828 20.6484 15.0662 20.7008C15.9048 20.9366 16.7434 21.1463 17.5821 21.3822C18.4469 21.618 19.1807 21.0939 19.2069 20.2029C19.2593 19.338 19.3117 18.4732 19.3379 17.5822C19.3379 17.3725 19.4428 17.2939 19.6 17.2415C20.3862 16.9532 21.1986 16.6387 21.9848 16.3242C22.8235 15.9049 23.0855 15.0663 22.5876 14.3063ZM16.3241 10.0084L11.0828 15.2498C10.9517 15.3808 10.7683 15.4856 10.5848 15.5118C10.5324 15.5118 10.4538 15.538 10.4014 15.538C10.1655 15.538 9.90347 15.4332 9.72001 15.2498L7.57105 13.1008C7.20415 12.7339 7.20415 12.1311 7.57105 11.7642C7.93794 11.3973 8.5407 11.3973 8.9076 11.7642L10.3752 13.2318L14.9352 8.67182C15.3021 8.30493 15.9048 8.30493 16.2717 8.67182C16.691 9.03872 16.691 9.64148 16.3241 10.0084Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                </div>
+                                <div class="feature-title">
+                                    <h5><a href="profile.html">@Enzona Jane</a></h5>
+                                    <p><span>4.7</span> / 05</p>
+                                </div>
+                            </div>
+                            <figure class="image-effect">
+                                <img src="assets/images/featured/fe1.jpg" alt="explore images" class="img-fluid w-100">
+                            </figure>
+                            <div class="feature-footer d-flex gap-4 align-items-center justify-content-between">
+                                <a href="profile.html">
+                                    <i class="flaticon-image"></i>
+                                    45
+                                </a>
+                                <div class="d-flex gap-2">
+                                    <a href="profile.html">
+                                        <i class="flaticon-plus"></i>
+                                    </a>
+                                    <a href="profile.html">
+                                        <i class="flaticon-right-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 top-reveal">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-img">
+                                    <img src="assets/images/user/f2.png" alt="user">
+                                    <svg class="profile-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <ellipse cx="12.0001" cy="11.5386" rx="6.46154" ry="6" fill="#F9F9F9" />
+                                        <path
+                                            d="M22.5876 14.3063C22.1159 13.5725 21.6441 12.8649 21.1724 12.1311C21.0676 11.9739 21.0676 11.8691 21.1724 11.7118C21.6441 11.0042 22.0897 10.2967 22.5614 9.58907C23.1117 8.75045 22.8235 7.93803 21.88 7.59734C21.0938 7.30906 20.3076 6.99458 19.5214 6.70631C19.3641 6.65389 19.2855 6.54907 19.2855 6.36562C19.2593 5.50079 19.2069 4.63596 19.1545 3.79734C19.1021 2.8801 18.3945 2.35596 17.5035 2.59182C16.6648 2.80148 15.8262 3.03734 15.0138 3.2732C14.8304 3.32562 14.7255 3.2732 14.5945 3.14217C14.0704 2.46079 13.52 1.80562 12.9959 1.15044C12.4193 0.416649 11.5283 0.416649 10.9255 1.15044C10.4014 1.80562 9.85104 2.46079 9.35311 3.11596C9.22208 3.29941 9.09105 3.32562 8.88139 3.2732C8.06897 3.03734 7.25656 2.82769 6.68001 2.67044C5.55311 2.40837 4.87174 2.85389 4.81932 3.79734C4.76691 4.66217 4.7145 5.527 4.68829 6.41803C4.68829 6.60148 4.60967 6.6801 4.45243 6.75872C3.64001 7.0732 2.8276 7.38768 2.01518 7.70217C1.17656 8.04286 0.914496 8.85527 1.41243 9.61527C1.88415 10.3491 2.35588 11.0567 2.8276 11.7904C2.93242 11.9477 2.93242 12.0525 2.8276 12.236C2.32967 12.9698 1.85794 13.7036 1.38622 14.4635C0.9407 15.1711 1.22897 16.0098 2.01518 16.3242C2.8276 16.6387 3.66622 16.9532 4.47863 17.2677C4.66207 17.3201 4.71449 17.4249 4.71449 17.6084C4.7407 18.447 4.84552 19.2594 4.84552 20.098C4.84552 20.9367 5.57932 21.6967 6.60138 21.3822C7.4138 21.1201 8.22621 20.9366 9.03863 20.7008C9.19587 20.6484 9.30069 20.6746 9.40552 20.8318C9.95587 21.5132 10.48 22.1684 11.0303 22.8498C11.6331 23.5835 12.4979 23.5835 13.0745 22.8498C13.6248 22.1684 14.149 21.5132 14.6993 20.8318C14.8041 20.7008 14.8828 20.6484 15.0662 20.7008C15.9048 20.9366 16.7434 21.1463 17.5821 21.3822C18.4469 21.618 19.1807 21.0939 19.2069 20.2029C19.2593 19.338 19.3117 18.4732 19.3379 17.5822C19.3379 17.3725 19.4428 17.2939 19.6 17.2415C20.3862 16.9532 21.1986 16.6387 21.9848 16.3242C22.8235 15.9049 23.0855 15.0663 22.5876 14.3063ZM16.3241 10.0084L11.0828 15.2498C10.9517 15.3808 10.7683 15.4856 10.5848 15.5118C10.5324 15.5118 10.4538 15.538 10.4014 15.538C10.1655 15.538 9.90347 15.4332 9.72001 15.2498L7.57105 13.1008C7.20415 12.7339 7.20415 12.1311 7.57105 11.7642C7.93794 11.3973 8.5407 11.3973 8.9076 11.7642L10.3752 13.2318L14.9352 8.67182C15.3021 8.30493 15.9048 8.30493 16.2717 8.67182C16.691 9.03872 16.691 9.64148 16.3241 10.0084Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                </div>
+                                <div class="feature-title">
+                                    <h5><a href="profile.html">@Zylera Moon</a></h5>
+                                    <p><span>4.5</span> / 05</p>
+                                </div>
+                            </div>
+                            <figure class="image-effect">
+                                <img src="assets/images/featured/fe2.jpg" alt="explore images" class="img-fluid w-100">
+                            </figure>
+                            <div class="feature-footer d-flex gap-4 align-items-center justify-content-between">
+                                <a href="profile.html">
+                                    <i class="flaticon-image"></i>
+                                    75
+                                </a>
+                                <div class="d-flex gap-2">
+                                    <a href="profile.html">
+                                        <i class="flaticon-plus"></i>
+                                    </a>
+                                    <a href="profile.html">
+                                        <i class="flaticon-right-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 top-reveal">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-img">
+                                    <img src="assets/images/user/f3.png" alt="user">
+                                    <svg class="profile-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <ellipse cx="12.0001" cy="11.5386" rx="6.46154" ry="6" fill="#F9F9F9" />
+                                        <path
+                                            d="M22.5876 14.3063C22.1159 13.5725 21.6441 12.8649 21.1724 12.1311C21.0676 11.9739 21.0676 11.8691 21.1724 11.7118C21.6441 11.0042 22.0897 10.2967 22.5614 9.58907C23.1117 8.75045 22.8235 7.93803 21.88 7.59734C21.0938 7.30906 20.3076 6.99458 19.5214 6.70631C19.3641 6.65389 19.2855 6.54907 19.2855 6.36562C19.2593 5.50079 19.2069 4.63596 19.1545 3.79734C19.1021 2.8801 18.3945 2.35596 17.5035 2.59182C16.6648 2.80148 15.8262 3.03734 15.0138 3.2732C14.8304 3.32562 14.7255 3.2732 14.5945 3.14217C14.0704 2.46079 13.52 1.80562 12.9959 1.15044C12.4193 0.416649 11.5283 0.416649 10.9255 1.15044C10.4014 1.80562 9.85104 2.46079 9.35311 3.11596C9.22208 3.29941 9.09105 3.32562 8.88139 3.2732C8.06897 3.03734 7.25656 2.82769 6.68001 2.67044C5.55311 2.40837 4.87174 2.85389 4.81932 3.79734C4.76691 4.66217 4.7145 5.527 4.68829 6.41803C4.68829 6.60148 4.60967 6.6801 4.45243 6.75872C3.64001 7.0732 2.8276 7.38768 2.01518 7.70217C1.17656 8.04286 0.914496 8.85527 1.41243 9.61527C1.88415 10.3491 2.35588 11.0567 2.8276 11.7904C2.93242 11.9477 2.93242 12.0525 2.8276 12.236C2.32967 12.9698 1.85794 13.7036 1.38622 14.4635C0.9407 15.1711 1.22897 16.0098 2.01518 16.3242C2.8276 16.6387 3.66622 16.9532 4.47863 17.2677C4.66207 17.3201 4.71449 17.4249 4.71449 17.6084C4.7407 18.447 4.84552 19.2594 4.84552 20.098C4.84552 20.9367 5.57932 21.6967 6.60138 21.3822C7.4138 21.1201 8.22621 20.9366 9.03863 20.7008C9.19587 20.6484 9.30069 20.6746 9.40552 20.8318C9.95587 21.5132 10.48 22.1684 11.0303 22.8498C11.6331 23.5835 12.4979 23.5835 13.0745 22.8498C13.6248 22.1684 14.149 21.5132 14.6993 20.8318C14.8041 20.7008 14.8828 20.6484 15.0662 20.7008C15.9048 20.9366 16.7434 21.1463 17.5821 21.3822C18.4469 21.618 19.1807 21.0939 19.2069 20.2029C19.2593 19.338 19.3117 18.4732 19.3379 17.5822C19.3379 17.3725 19.4428 17.2939 19.6 17.2415C20.3862 16.9532 21.1986 16.6387 21.9848 16.3242C22.8235 15.9049 23.0855 15.0663 22.5876 14.3063ZM16.3241 10.0084L11.0828 15.2498C10.9517 15.3808 10.7683 15.4856 10.5848 15.5118C10.5324 15.5118 10.4538 15.538 10.4014 15.538C10.1655 15.538 9.90347 15.4332 9.72001 15.2498L7.57105 13.1008C7.20415 12.7339 7.20415 12.1311 7.57105 11.7642C7.93794 11.3973 8.5407 11.3973 8.9076 11.7642L10.3752 13.2318L14.9352 8.67182C15.3021 8.30493 15.9048 8.30493 16.2717 8.67182C16.691 9.03872 16.691 9.64148 16.3241 10.0084Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                </div>
+                                <div class="feature-title">
+                                    <h5><a href="profile.html">@Elvora Lyn</a></h5>
+                                    <p><span>4.9</span> / 05</p>
+                                </div>
+                            </div>
+                            <figure class="image-effect">
+                                <img src="assets/images/featured/fe3.jpg" alt="explore images" class="img-fluid w-100">
+                            </figure>
+                            <div class="feature-footer d-flex gap-4 align-items-center justify-content-between">
+                                <a href="profile.html">
+                                    <i class="flaticon-image"></i>
+                                    42
+                                </a>
+                                <div class="d-flex gap-2">
+                                    <a href="profile.html">
+                                        <i class="flaticon-plus"></i>
+                                    </a>
+                                    <a href="profile.html">
+                                        <i class="flaticon-right-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 top-reveal">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-img">
+                                    <img src="assets/images/user/f4.png" alt="user">
+                                    <svg class="profile-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <ellipse cx="12.0001" cy="11.5386" rx="6.46154" ry="6" fill="#F9F9F9" />
+                                        <path
+                                            d="M22.5876 14.3063C22.1159 13.5725 21.6441 12.8649 21.1724 12.1311C21.0676 11.9739 21.0676 11.8691 21.1724 11.7118C21.6441 11.0042 22.0897 10.2967 22.5614 9.58907C23.1117 8.75045 22.8235 7.93803 21.88 7.59734C21.0938 7.30906 20.3076 6.99458 19.5214 6.70631C19.3641 6.65389 19.2855 6.54907 19.2855 6.36562C19.2593 5.50079 19.2069 4.63596 19.1545 3.79734C19.1021 2.8801 18.3945 2.35596 17.5035 2.59182C16.6648 2.80148 15.8262 3.03734 15.0138 3.2732C14.8304 3.32562 14.7255 3.2732 14.5945 3.14217C14.0704 2.46079 13.52 1.80562 12.9959 1.15044C12.4193 0.416649 11.5283 0.416649 10.9255 1.15044C10.4014 1.80562 9.85104 2.46079 9.35311 3.11596C9.22208 3.29941 9.09105 3.32562 8.88139 3.2732C8.06897 3.03734 7.25656 2.82769 6.68001 2.67044C5.55311 2.40837 4.87174 2.85389 4.81932 3.79734C4.76691 4.66217 4.7145 5.527 4.68829 6.41803C4.68829 6.60148 4.60967 6.6801 4.45243 6.75872C3.64001 7.0732 2.8276 7.38768 2.01518 7.70217C1.17656 8.04286 0.914496 8.85527 1.41243 9.61527C1.88415 10.3491 2.35588 11.0567 2.8276 11.7904C2.93242 11.9477 2.93242 12.0525 2.8276 12.236C2.32967 12.9698 1.85794 13.7036 1.38622 14.4635C0.9407 15.1711 1.22897 16.0098 2.01518 16.3242C2.8276 16.6387 3.66622 16.9532 4.47863 17.2677C4.66207 17.3201 4.71449 17.4249 4.71449 17.6084C4.7407 18.447 4.84552 19.2594 4.84552 20.098C4.84552 20.9367 5.57932 21.6967 6.60138 21.3822C7.4138 21.1201 8.22621 20.9366 9.03863 20.7008C9.19587 20.6484 9.30069 20.6746 9.40552 20.8318C9.95587 21.5132 10.48 22.1684 11.0303 22.8498C11.6331 23.5835 12.4979 23.5835 13.0745 22.8498C13.6248 22.1684 14.149 21.5132 14.6993 20.8318C14.8041 20.7008 14.8828 20.6484 15.0662 20.7008C15.9048 20.9366 16.7434 21.1463 17.5821 21.3822C18.4469 21.618 19.1807 21.0939 19.2069 20.2029C19.2593 19.338 19.3117 18.4732 19.3379 17.5822C19.3379 17.3725 19.4428 17.2939 19.6 17.2415C20.3862 16.9532 21.1986 16.6387 21.9848 16.3242C22.8235 15.9049 23.0855 15.0663 22.5876 14.3063ZM16.3241 10.0084L11.0828 15.2498C10.9517 15.3808 10.7683 15.4856 10.5848 15.5118C10.5324 15.5118 10.4538 15.538 10.4014 15.538C10.1655 15.538 9.90347 15.4332 9.72001 15.2498L7.57105 13.1008C7.20415 12.7339 7.20415 12.1311 7.57105 11.7642C7.93794 11.3973 8.5407 11.3973 8.9076 11.7642L10.3752 13.2318L14.9352 8.67182C15.3021 8.30493 15.9048 8.30493 16.2717 8.67182C16.691 9.03872 16.691 9.64148 16.3241 10.0084Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                </div>
+                                <div class="feature-title">
+                                    <h5><a href="profile.html">@Synora Belle</a></h5>
+                                    <p><span>4.8</span> / 05</p>
+                                </div>
+                            </div>
+                            <figure class="image-effect">
+                                <img src="assets/images/featured/fe4.jpg" alt="explore images" class="img-fluid w-100">
+                            </figure>
+                            <div class="feature-footer d-flex gap-4 align-items-center justify-content-between">
+                                <a href="profile.html">
+                                    <i class="flaticon-image"></i>
+                                    87
+                                </a>
+                                <div class="d-flex gap-2">
+                                    <a href="profile.html">
+                                        <i class="flaticon-plus"></i>
+                                    </a>
+                                    <a href="profile.html">
+                                        <i class="flaticon-right-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 top-reveal">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-img">
+                                    <img src="assets/images/user/f5.png" alt="user">
+                                    <svg class="profile-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <ellipse cx="12.0001" cy="11.5386" rx="6.46154" ry="6" fill="#F9F9F9" />
+                                        <path
+                                            d="M22.5876 14.3063C22.1159 13.5725 21.6441 12.8649 21.1724 12.1311C21.0676 11.9739 21.0676 11.8691 21.1724 11.7118C21.6441 11.0042 22.0897 10.2967 22.5614 9.58907C23.1117 8.75045 22.8235 7.93803 21.88 7.59734C21.0938 7.30906 20.3076 6.99458 19.5214 6.70631C19.3641 6.65389 19.2855 6.54907 19.2855 6.36562C19.2593 5.50079 19.2069 4.63596 19.1545 3.79734C19.1021 2.8801 18.3945 2.35596 17.5035 2.59182C16.6648 2.80148 15.8262 3.03734 15.0138 3.2732C14.8304 3.32562 14.7255 3.2732 14.5945 3.14217C14.0704 2.46079 13.52 1.80562 12.9959 1.15044C12.4193 0.416649 11.5283 0.416649 10.9255 1.15044C10.4014 1.80562 9.85104 2.46079 9.35311 3.11596C9.22208 3.29941 9.09105 3.32562 8.88139 3.2732C8.06897 3.03734 7.25656 2.82769 6.68001 2.67044C5.55311 2.40837 4.87174 2.85389 4.81932 3.79734C4.76691 4.66217 4.7145 5.527 4.68829 6.41803C4.68829 6.60148 4.60967 6.6801 4.45243 6.75872C3.64001 7.0732 2.8276 7.38768 2.01518 7.70217C1.17656 8.04286 0.914496 8.85527 1.41243 9.61527C1.88415 10.3491 2.35588 11.0567 2.8276 11.7904C2.93242 11.9477 2.93242 12.0525 2.8276 12.236C2.32967 12.9698 1.85794 13.7036 1.38622 14.4635C0.9407 15.1711 1.22897 16.0098 2.01518 16.3242C2.8276 16.6387 3.66622 16.9532 4.47863 17.2677C4.66207 17.3201 4.71449 17.4249 4.71449 17.6084C4.7407 18.447 4.84552 19.2594 4.84552 20.098C4.84552 20.9367 5.57932 21.6967 6.60138 21.3822C7.4138 21.1201 8.22621 20.9366 9.03863 20.7008C9.19587 20.6484 9.30069 20.6746 9.40552 20.8318C9.95587 21.5132 10.48 22.1684 11.0303 22.8498C11.6331 23.5835 12.4979 23.5835 13.0745 22.8498C13.6248 22.1684 14.149 21.5132 14.6993 20.8318C14.8041 20.7008 14.8828 20.6484 15.0662 20.7008C15.9048 20.9366 16.7434 21.1463 17.5821 21.3822C18.4469 21.618 19.1807 21.0939 19.2069 20.2029C19.2593 19.338 19.3117 18.4732 19.3379 17.5822C19.3379 17.3725 19.4428 17.2939 19.6 17.2415C20.3862 16.9532 21.1986 16.6387 21.9848 16.3242C22.8235 15.9049 23.0855 15.0663 22.5876 14.3063ZM16.3241 10.0084L11.0828 15.2498C10.9517 15.3808 10.7683 15.4856 10.5848 15.5118C10.5324 15.5118 10.4538 15.538 10.4014 15.538C10.1655 15.538 9.90347 15.4332 9.72001 15.2498L7.57105 13.1008C7.20415 12.7339 7.20415 12.1311 7.57105 11.7642C7.93794 11.3973 8.5407 11.3973 8.9076 11.7642L10.3752 13.2318L14.9352 8.67182C15.3021 8.30493 15.9048 8.30493 16.2717 8.67182C16.691 9.03872 16.691 9.64148 16.3241 10.0084Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                </div>
+                                <div class="feature-title">
+                                    <h5><a href="profile.html">@Sophia Reed</a></h5>
+                                    <p><span>4.6</span> / 05</p>
+                                </div>
+                            </div>
+                            <figure class="image-effect">
+                                <img src="assets/images/featured/fe5.jpg" alt="explore images" class="img-fluid w-100">
+                            </figure>
+                            <div class="feature-footer d-flex gap-4 align-items-center justify-content-between">
+                                <a href="profile.html">
+                                    <i class="flaticon-image"></i>
+                                    72
+                                </a>
+                                <div class="d-flex gap-2">
+                                    <a href="profile.html"><i class="flaticon-plus"></i></a>
+                                    <a href="profile.html"><i class="flaticon-right-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 top-reveal">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-img">
+                                    <img src="assets/images/user/f6.png" alt="user">
+                                    <svg class="profile-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <ellipse cx="12.0001" cy="11.5386" rx="6.46154" ry="6" fill="#F9F9F9" />
+                                        <path
+                                            d="M22.5876 14.3063C22.1159 13.5725 21.6441 12.8649 21.1724 12.1311C21.0676 11.9739 21.0676 11.8691 21.1724 11.7118C21.6441 11.0042 22.0897 10.2967 22.5614 9.58907C23.1117 8.75045 22.8235 7.93803 21.88 7.59734C21.0938 7.30906 20.3076 6.99458 19.5214 6.70631C19.3641 6.65389 19.2855 6.54907 19.2855 6.36562C19.2593 5.50079 19.2069 4.63596 19.1545 3.79734C19.1021 2.8801 18.3945 2.35596 17.5035 2.59182C16.6648 2.80148 15.8262 3.03734 15.0138 3.2732C14.8304 3.32562 14.7255 3.2732 14.5945 3.14217C14.0704 2.46079 13.52 1.80562 12.9959 1.15044C12.4193 0.416649 11.5283 0.416649 10.9255 1.15044C10.4014 1.80562 9.85104 2.46079 9.35311 3.11596C9.22208 3.29941 9.09105 3.32562 8.88139 3.2732C8.06897 3.03734 7.25656 2.82769 6.68001 2.67044C5.55311 2.40837 4.87174 2.85389 4.81932 3.79734C4.76691 4.66217 4.7145 5.527 4.68829 6.41803C4.68829 6.60148 4.60967 6.6801 4.45243 6.75872C3.64001 7.0732 2.8276 7.38768 2.01518 7.70217C1.17656 8.04286 0.914496 8.85527 1.41243 9.61527C1.88415 10.3491 2.35588 11.0567 2.8276 11.7904C2.93242 11.9477 2.93242 12.0525 2.8276 12.236C2.32967 12.9698 1.85794 13.7036 1.38622 14.4635C0.9407 15.1711 1.22897 16.0098 2.01518 16.3242C2.8276 16.6387 3.66622 16.9532 4.47863 17.2677C4.66207 17.3201 4.71449 17.4249 4.71449 17.6084C4.7407 18.447 4.84552 19.2594 4.84552 20.098C4.84552 20.9367 5.57932 21.6967 6.60138 21.3822C7.4138 21.1201 8.22621 20.9366 9.03863 20.7008C9.19587 20.6484 9.30069 20.6746 9.40552 20.8318C9.95587 21.5132 10.48 22.1684 11.0303 22.8498C11.6331 23.5835 12.4979 23.5835 13.0745 22.8498C13.6248 22.1684 14.149 21.5132 14.6993 20.8318C14.8041 20.7008 14.8828 20.6484 15.0662 20.7008C15.9048 20.9366 16.7434 21.1463 17.5821 21.3822C18.4469 21.618 19.1807 21.0939 19.2069 20.2029C19.2593 19.338 19.3117 18.4732 19.3379 17.5822C19.3379 17.3725 19.4428 17.2939 19.6 17.2415C20.3862 16.9532 21.1986 16.6387 21.9848 16.3242C22.8235 15.9049 23.0855 15.0663 22.5876 14.3063ZM16.3241 10.0084L11.0828 15.2498C10.9517 15.3808 10.7683 15.4856 10.5848 15.5118C10.5324 15.5118 10.4538 15.538 10.4014 15.538C10.1655 15.538 9.90347 15.4332 9.72001 15.2498L7.57105 13.1008C7.20415 12.7339 7.20415 12.1311 7.57105 11.7642C7.93794 11.3973 8.5407 11.3973 8.9076 11.7642L10.3752 13.2318L14.9352 8.67182C15.3021 8.30493 15.9048 8.30493 16.2717 8.67182C16.691 9.03872 16.691 9.64148 16.3241 10.0084Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                </div>
+                                <div class="feature-title">
+                                    <h5><a href="profile.html">@Mason White</a></h5>
+                                    <p><span>4.9</span> / 05</p>
+                                </div>
+                            </div>
+                            <figure class="image-effect">
+                                <img src="assets/images/featured/fe6.jpg" alt="explore images" class="img-fluid w-100">
+                            </figure>
+                            <div class="feature-footer d-flex gap-4 align-items-center justify-content-between">
+                                <a href="profile.html">
+                                    <i class="flaticon-image"></i>
+                                    38
+                                </a>
+                                <div class="d-flex gap-2">
+                                    <a href="profile.html"><i class="flaticon-plus"></i></a>
+                                    <a href="profile.html"><i class="flaticon-right-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 top-reveal">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-img">
+                                    <img src="assets/images/user/f7.png" alt="user">
+                                    <svg class="profile-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <ellipse cx="12.0001" cy="11.5386" rx="6.46154" ry="6" fill="#F9F9F9" />
+                                        <path
+                                            d="M22.5876 14.3063C22.1159 13.5725 21.6441 12.8649 21.1724 12.1311C21.0676 11.9739 21.0676 11.8691 21.1724 11.7118C21.6441 11.0042 22.0897 10.2967 22.5614 9.58907C23.1117 8.75045 22.8235 7.93803 21.88 7.59734C21.0938 7.30906 20.3076 6.99458 19.5214 6.70631C19.3641 6.65389 19.2855 6.54907 19.2855 6.36562C19.2593 5.50079 19.2069 4.63596 19.1545 3.79734C19.1021 2.8801 18.3945 2.35596 17.5035 2.59182C16.6648 2.80148 15.8262 3.03734 15.0138 3.2732C14.8304 3.32562 14.7255 3.2732 14.5945 3.14217C14.0704 2.46079 13.52 1.80562 12.9959 1.15044C12.4193 0.416649 11.5283 0.416649 10.9255 1.15044C10.4014 1.80562 9.85104 2.46079 9.35311 3.11596C9.22208 3.29941 9.09105 3.32562 8.88139 3.2732C8.06897 3.03734 7.25656 2.82769 6.68001 2.67044C5.55311 2.40837 4.87174 2.85389 4.81932 3.79734C4.76691 4.66217 4.7145 5.527 4.68829 6.41803C4.68829 6.60148 4.60967 6.6801 4.45243 6.75872C3.64001 7.0732 2.8276 7.38768 2.01518 7.70217C1.17656 8.04286 0.914496 8.85527 1.41243 9.61527C1.88415 10.3491 2.35588 11.0567 2.8276 11.7904C2.93242 11.9477 2.93242 12.0525 2.8276 12.236C2.32967 12.9698 1.85794 13.7036 1.38622 14.4635C0.9407 15.1711 1.22897 16.0098 2.01518 16.3242C2.8276 16.6387 3.66622 16.9532 4.47863 17.2677C4.66207 17.3201 4.71449 17.4249 4.71449 17.6084C4.7407 18.447 4.84552 19.2594 4.84552 20.098C4.84552 20.9367 5.57932 21.6967 6.60138 21.3822C7.4138 21.1201 8.22621 20.9366 9.03863 20.7008C9.19587 20.6484 9.30069 20.6746 9.40552 20.8318C9.95587 21.5132 10.48 22.1684 11.0303 22.8498C11.6331 23.5835 12.4979 23.5835 13.0745 22.8498C13.6248 22.1684 14.149 21.5132 14.6993 20.8318C14.8041 20.7008 14.8828 20.6484 15.0662 20.7008C15.9048 20.9366 16.7434 21.1463 17.5821 21.3822C18.4469 21.618 19.1807 21.0939 19.2069 20.2029C19.2593 19.338 19.3117 18.4732 19.3379 17.5822C19.3379 17.3725 19.4428 17.2939 19.6 17.2415C20.3862 16.9532 21.1986 16.6387 21.9848 16.3242C22.8235 15.9049 23.0855 15.0663 22.5876 14.3063ZM16.3241 10.0084L11.0828 15.2498C10.9517 15.3808 10.7683 15.4856 10.5848 15.5118C10.5324 15.5118 10.4538 15.538 10.4014 15.538C10.1655 15.538 9.90347 15.4332 9.72001 15.2498L7.57105 13.1008C7.20415 12.7339 7.20415 12.1311 7.57105 11.7642C7.93794 11.3973 8.5407 11.3973 8.9076 11.7642L10.3752 13.2318L14.9352 8.67182C15.3021 8.30493 15.9048 8.30493 16.2717 8.67182C16.691 9.03872 16.691 9.64148 16.3241 10.0084Z"
+                                            fill="#34C759" />
+                                    </svg>
+                                </div>
+                                <div class="feature-title">
+                                    <h5><a href="profile.html">@Ava Martinez</a></h5>
+                                    <p><span>4.7</span> / 05</p>
+                                </div>
+                            </div>
+                            <figure class="image-effect">
+                                <img src="assets/images/featured/fe7.jpg" alt="explore images" class="img-fluid w-100">
+                            </figure>
+                            <div class="feature-footer d-flex gap-4 align-items-center justify-content-between">
+                                <a href="profile.html">
+                                    <i class="flaticon-image"></i>
+                                    95
+                                </a>
+                                <div class="d-flex gap-2">
+                                    <a href="profile.html"><i class="flaticon-plus"></i></a>
+                                    <a href="profile.html"><i class="flaticon-right-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-xl-3 col-lg-4 col-md-6 top-reveal">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-img">
+                                    <img src="assets/images/user/f8.png" alt="user">
+                                </div>
+                                <div class="feature-title">
+                                    <h5><a href="profile.html">@Liam Carter</a></h5>
+                                    <p><span>4.8</span> / 05</p>
+                                </div>
+                            </div>
+                            <figure class="image-effect">
+                                <img src="assets/images/featured/fe8.jpg" alt="explore images" class="img-fluid w-100">
+                            </figure>
+                            <div class="feature-footer d-flex gap-4 align-items-center justify-content-between">
+                                <a href="profile.html">
+                                    <i class="flaticon-image"></i>
+                                    50
+                                </a>
+                                <div class="d-flex gap-2">
+                                    <a href="profile.html"><i class="flaticon-plus"></i></a>
+                                    <a href="profile.html"><i class="flaticon-right-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =====>> End Feature <<=====
+        =========================== -->
+        <!-- ===========================
+        =====>> Collections <<======= -->
+        <section class="collection-section section-two-bg py-120">
+            <div class="container">
+                <div class="row row-gap-5">
+                    <div class="col-lg-6 align-self-end">
+                        <div class="section-title text-start">
+                            <span class="sub-title right-reveal">Collections</span>
+                            <h2 class="right-reveal">Hot Collections</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 align-self-end">
+                        <div class="d-flex justify-content-end">
+                            <a href="collection.html" class="btn btn--base">
+                                See More
+                                <i class="flaticon-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-60 row-gap-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 top-reveal">
+                        <div class="collection-item">
+                            <figure class="image-effect cover-img">
+                                <img src="assets/images/collection/cover1.jpg" alt="collection images"
+                                    class="img-fluid w-100">
+                            </figure>
+                            <figure class="image-effect prifle-img">
+                                <img src="assets/images/collection/profile1.jpg" alt="collection images"
+                                    class="img-fluid w-100">
+                            </figure>
+                            <div class="collection-title">
+                                <h4><a href="prompts.html">Modern Art Collection</a></h4>
+                                <p>4 Prompts</p>
+                            </div>
+                            <div class="collection-preview">
+                                <figure class="image-effect">
+                                    <img src="assets/images/collection/p11.jpg" alt="collection images"
+                                        class="img-fluid w-100">
+                                </figure>
+                                <figure class="image-effect">
+                                    <img src="assets/images/collection/p12.jpg" alt="collection images"
+                                        class="img-fluid w-100">
+                                </figure>
+                                <figure class="image-effect">
+                                    <img src="assets/images/collection/p13.jpg" alt="collection images"
+                                        class="img-fluid w-100">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 top-reveal">
+                        <div class="collection-item">
+                            <figure class="image-effect cover-img">
+                                <img src="assets/images/collection/cover2.jpg" alt="collection images"
+                                    class="img-fluid w-100">
+                            </figure>
+                            <figure class="image-effect prifle-img">
+                                <img src="assets/images/collection/profile2.jpg" alt="collection images"
+                                    class="img-fluid w-100">
+                            </figure>
+                            <div class="collection-title">
+                                <h4><a href="prompts.html">Neon NFT Collection</a></h4>
+                                <p>4 Prompts</p>
+                            </div>
+                            <div class="collection-preview">
+                                <figure class="image-effect">
+                                    <img src="assets/images/collection/p21.jpg" alt="collection images"
+                                        class="img-fluid w-100">
+                                </figure>
+                                <figure class="image-effect">
+                                    <img src="assets/images/collection/p22.jpg" alt="collection images"
+                                        class="img-fluid w-100">
+                                </figure>
+                                <figure class="image-effect">
+                                    <img src="assets/images/collection/p23.jpg" alt="collection images"
+                                        class="img-fluid w-100">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 top-reveal">
+                        <div class="collection-item">
+                            <figure class="image-effect cover-img">
+                                <img src="assets/images/collection/cover3.jpg" alt="collection images"
+                                    class="img-fluid w-100">
+                            </figure>
+                            <figure class="image-effect prifle-img">
+                                <img src="assets/images/collection/profile3.jpg" alt="collection images"
+                                    class="img-fluid w-100">
+                            </figure>
+                            <div class="collection-title">
+                                <h4><a href="prompts.html">AI Pop Art Collection</a></h4>
+                                <p>4 Prompts</p>
+                            </div>
+                            <div class="collection-preview">
+                                <figure class="image-effect">
+                                    <img src="assets/images/collection/p31.jpg" alt="collection images"
+                                        class="img-fluid w-100">
+                                </figure>
+                                <figure class="image-effect">
+                                    <img src="assets/images/collection/p32.jpg" alt="collection images"
+                                        class="img-fluid w-100">
+                                </figure>
+                                <figure class="image-effect">
+                                    <img src="assets/images/collection/p33.jpg" alt="collection images"
+                                        class="img-fluid w-100">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =====>> End Collections <<=====
+        =========================== -->
+        <!-- ===========================
+        =====>> Company <<======= -->
+        <div class="company-sectio py-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="company-slide swiper">
+                            <div class="swiper-wrapper slide-transition">
+                                <div class="swiper-slide inner-slide-element">
+                                    <img src="assets/images/company/1.png" alt="Company Image">
+                                </div>
+                                <div class="swiper-slide inner-slide-element">
+                                    <img src="assets/images/company/2.png" alt="Company Image">
+                                </div>
+                                <div class="swiper-slide inner-slide-element">
+                                    <img src="assets/images/company/3.png" alt="Company Image">
+                                </div>
+                                <div class="swiper-slide inner-slide-element">
+                                    <img src="assets/images/company/4.png" alt="Company Image">
+                                </div>
+                                <div class="swiper-slide inner-slide-element">
+                                    <img src="assets/images/company/5.png" alt="Company Image">
+                                </div>
+                                <div class="swiper-slide inner-slide-element">
+                                    <img src="assets/images/company/1.png" alt="Company Image">
+                                </div>
+                                <div class="swiper-slide inner-slide-element">
+                                    <img src="assets/images/company/2.png" alt="Company Image">
+                                </div>
+                                <div class="swiper-slide inner-slide-element">
+                                    <img src="assets/images/company/3.png" alt="Company Image">
+                                </div>
+                                <div class="swiper-slide inner-slide-element">
+                                    <img src="assets/images/company/4.png" alt="Company Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- =====>> End Company <<=====
+        =========================== -->
+
+    </main>
+    <!-- ===========================
+    =====>> footer <<===== -->
+    <footer class="footer-area section-two-bg">
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row row-gap-5 justify-content-center">
+                    <div class="col-lg-4 col-md-8">
+                        <div class="footer-widget__item text-center text-lg-start">
+                            <a href="index.html" class="d-block">
+                                <img src="assets/images/logo/logo.svg" alt="logo">
+                            </a>
+                            <br>
+                            <p>
+                                Pixgix is your go-to AI-powered platform for in effortlessly creating stunning,
+                                high-quality
+                                images seconds. Whether you're a designer, marketer.
+                            </p>
+                            <br>
+                            <div class="footer-email">
+                                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                            </div>
+                            <div class="footer-phone">
+                                <h4><a href="tel:+36543594358">+365 4359 4358</a></h4>
+                            </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.x.com/?lang=en" target="_blank">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/" target="_blank">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="footer-widget__content ps-xl-5">
+                            <div class="footer-widget__item">
+                                <h4>Company</h4>
+                                <ul class="useful-list">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="contact.html">Supports</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="register.html">Sign Up</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget__item">
+                                <h4>Quick Links</h4>
+                                <ul class="useful-list">
+                                    <li><a href="generator.html">Generate</a></li>
+                                    <li><a href="team.html">Our Team</a></li>
+                                    <li><a href="pricing.html">Pricing</a></li>
+                                    <li><a href="blog-grid.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget__item">
+                                <h4>Stay Updated</h4>
+                                <p>join Pixgix newsletter Stay updated with the latest AI trends and offers.</p>
+                                <div class="footer-widget__form">
+                                    <form action="#">
+                                        <input type="email" name="email" placeholder="Enter E-Mail">
+                                        <button type="submit" class="btn btn--base">
+                                            Subscribe
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copy-right__content">
+                            <p class="copy-right__text">
+                                Copyright © 2025 All Rights Reserved By <a href="index.html">Pixgix</a>
+                            </p>
+                            <ul class="nav gap-4 row-gap-2">
+                                <li><a href="contact.html">Help Center</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-service.html">Terms of Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- =====>> End footer <<=====
+    =========================== -->
+
+
+    <!-- Jquery js -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/js/boostrap.bundle.min.js"></script>
+    <!-- gsap js -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- ScrollTrigger js -->
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <!-- Scroll Reveal js -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <!-- images loaded js -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- isotope js -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- magnific popup js -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- swiper js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Odometer js -->
+    <script src="assets/js/odometer.min.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
