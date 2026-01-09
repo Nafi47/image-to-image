@@ -978,10 +978,8 @@ prompt:"Generate a hyper-realistic formal studio photograph based on the specifi
         console.log('Image URL:', imageUrl);
         
         if (imageUrl) {
-          const proxiedImageUrl = "/.netlify/functions/proxy-image?url=" + encodeURIComponent(imageUrl);
-
-await renderGeneratedImage(proxiedImageUrl, secondCard);
-showImagePopup(proxiedImageUrl);
+ await renderGeneratedImage(imageUrl, secondCard);
+showImagePopup(imageUrl);
         } else {
             console.error('Tam API yanıtı:', result);
             throw new Error('API yanıtında görsel bulunamadı. Konsolu kontrol edin.');
