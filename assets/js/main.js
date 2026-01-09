@@ -978,7 +978,7 @@ prompt:"Generate a hyper-realistic formal studio photograph based on the specifi
         console.log('Image URL:', imageUrl);
         
         if (imageUrl) {
-         const proxiedImageUrl = "/.netlify/functions/proxy-image?url=" + encodeURIComponent(imageUrl);
+          const proxiedImageUrl = "/.netlify/functions/proxy-image?url=" + encodeURIComponent(imageUrl);
 
 await renderGeneratedImage(proxiedImageUrl, secondCard);
 showImagePopup(proxiedImageUrl);
