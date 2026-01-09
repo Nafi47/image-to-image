@@ -978,8 +978,8 @@ prompt:"Generate a hyper-realistic formal studio photograph based on the specifi
         console.log('Image URL:', imageUrl);
         
         if (imageUrl) {
- await renderGeneratedImage(imageUrl, secondCard);
-showImagePopup(imageUrl);
+          await downloadImage(imageUrl);
+          secondCard.innerHTML = '<div class="placeholder">Görsel indiriliyor, lütfen tarayıcı indirmesini onaylayın.</div>';
         } else {
             console.error('Tam API yanıtı:', result);
             throw new Error('API yanıtında görsel bulunamadı. Konsolu kontrol edin.');
