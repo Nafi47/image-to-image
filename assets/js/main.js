@@ -1125,24 +1125,27 @@ function startLoaderProgress(progressElement, percentElement) {
   loaderProgressIntervalId = setInterval(() => {
     // Daha gerçekçi ilerleme: başta hızlı, sona doğru yavaşlayan
     let increment;
-    if (loaderCurrentProgress < 20) {
-      // %0-20: Hızlı başlangıç (8-15%)
-      increment = Math.random() * 7 + 8;
-    } else if (loaderCurrentProgress < 40) {
-      // %20-40: Orta hız (5-10%)
+    if (loaderCurrentProgress < 15) {
+      // %0-15: Hızlı başlangıç (5-10%)
       increment = Math.random() * 5 + 5;
-    } else if (loaderCurrentProgress < 60) {
-      // %40-60: Yavaşlama (3-7%)
-      increment = Math.random() * 4 + 3;
-    } else if (loaderCurrentProgress < 80) {
-      // %60-80: Daha yavaş (2-5%)
-      increment = Math.random() * 3 + 2;
+    } else if (loaderCurrentProgress < 35) {
+      // %15-35: Orta hız (3-6%)
+      increment = Math.random() * 3 + 3;
+    } else if (loaderCurrentProgress < 55) {
+      // %35-55: Yavaşlama (2-4%)
+      increment = Math.random() * 2 + 2;
+    } else if (loaderCurrentProgress < 75) {
+      // %55-75: Daha yavaş (1-2.5%)
+      increment = Math.random() * 1.5 + 1;
+    } else if (loaderCurrentProgress < 90) {
+      // %75-90: Çok yavaş (0.5-1.5%)
+      increment = Math.random() * 1 + 0.5;
     } else if (loaderCurrentProgress < 95) {
-      // %80-95: Çok yavaş (0.5-2%)
-      increment = Math.random() * 1.5 + 0.5;
+      // %90-95: Minimum ilerleme (0.2-0.8%)
+      increment = Math.random() * 0.6 + 0.2;
     } else {
-      // %95-98: Minimum ilerleme (0.1-0.5%)
-      increment = Math.random() * 0.4 + 0.1;
+      // %95-98: Çok minimum ilerleme (0.05-0.3%)
+      increment = Math.random() * 0.25 + 0.05;
     }
     
     loaderCurrentProgress = Math.min(loaderCurrentProgress + increment, 98);
@@ -1152,7 +1155,7 @@ function startLoaderProgress(progressElement, percentElement) {
     if (loaderCurrentProgress >= 98) {
       stopLoaderProgress();
     }
-  }, 400);
+  }, 650);
 }
 
 function updateLoaderProgress(value) {
