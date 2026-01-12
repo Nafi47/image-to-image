@@ -1733,7 +1733,17 @@ header {
     border-radius: 999px;
     background: linear-gradient(90deg, #c4ff00, #8cff66, #c4ff00);
     box-shadow: 0 0 25px rgba(196, 255, 0, 0.6);
-    transition: width 0.4s ease;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .loader-percent {
@@ -1743,6 +1753,8 @@ header {
     color: #c4ff00;
     letter-spacing: 1px;
     margin-bottom: 12px;
+    text-shadow: 0 0 20px rgba(196, 255, 0, 0.5);
+    transition: all 0.2s ease;
 }
 
 .loader-hint {

@@ -1123,13 +1123,36 @@ function startLoaderProgress(progressElement, percentElement) {
   updateLoaderProgress(loaderCurrentProgress);
 
   loaderProgressIntervalId = setInterval(() => {
-    const increment = Math.random() * 7 + 4; // 4-11 arası ilerleme
-    loaderCurrentProgress = Math.min(loaderCurrentProgress + increment, 92);
+    // Daha gerçekçi ilerleme: başta hızlı, sona doğru yavaşlayan
+    let increment;
+    if (loaderCurrentProgress < 20) {
+      // %0-20: Hızlı başlangıç (8-15%)
+      increment = Math.random() * 7 + 8;
+    } else if (loaderCurrentProgress < 40) {
+      // %20-40: Orta hız (5-10%)
+      increment = Math.random() * 5 + 5;
+    } else if (loaderCurrentProgress < 60) {
+      // %40-60: Yavaşlama (3-7%)
+      increment = Math.random() * 4 + 3;
+    } else if (loaderCurrentProgress < 80) {
+      // %60-80: Daha yavaş (2-5%)
+      increment = Math.random() * 3 + 2;
+    } else if (loaderCurrentProgress < 95) {
+      // %80-95: Çok yavaş (0.5-2%)
+      increment = Math.random() * 1.5 + 0.5;
+    } else {
+      // %95-98: Minimum ilerleme (0.1-0.5%)
+      increment = Math.random() * 0.4 + 0.1;
+    }
+    
+    loaderCurrentProgress = Math.min(loaderCurrentProgress + increment, 98);
     updateLoaderProgress(loaderCurrentProgress);
-    if (loaderCurrentProgress >= 92) {
+    
+    // %98'de dur, görselin yüklenmesini bekle
+    if (loaderCurrentProgress >= 98) {
       stopLoaderProgress();
     }
-  }, 900);
+  }, 400);
 }
 
 function updateLoaderProgress(value) {
@@ -1137,7 +1160,15 @@ function updateLoaderProgress(value) {
     loaderProgressElement.style.width = `${value}%`;
   }
   if (loaderPercentElement) {
-    loaderPercentElement.textContent = `${Math.round(value)}%`;
+    // Ondalıklı değeri göster, daha smooth görünmesi için
+    const displayValue = value < 100 ? Math.floor(value) : 100;
+    loaderPercentElement.textContent = `${displayValue}%`;
+    
+    // İlerleme arttıkça renk efekti
+    if (value > 50) {
+      const intensity = Math.min((value - 50) / 50, 1);
+      loaderPercentElement.style.transform = `scale(${1 + intensity * 0.1})`;
+    }
   }
 }
 
