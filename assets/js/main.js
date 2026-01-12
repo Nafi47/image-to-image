@@ -1133,16 +1133,16 @@ function startLoaderProgress(progressElement, percentElement) {
       increment = Math.random() * 3 + 3;
     } else if (loaderCurrentProgress < 55) {
       // %35-55: Yavaşlama (2-4%)
-      increment = Math.random() * 2 + 2;
+      increment = Math.random() * 1.5 + 2;
     } else if (loaderCurrentProgress < 75) {
       // %55-75: Daha yavaş (1-2.5%)
-      increment = Math.random() * 1.5 + 1;
+      increment = Math.random() * 1 + 1;
     } else if (loaderCurrentProgress < 90) {
       // %75-90: Çok yavaş (0.5-1.5%)
-      increment = Math.random() * 1 + 0.5;
+       increment = Math.random() * 0.25 + 0.25;
     } else if (loaderCurrentProgress < 95) {
       // %90-95: Minimum ilerleme (0.2-0.8%)
-      increment = Math.random() * 0.6 + 0.2;
+           increment = Math.random() * 0.25 + 0.05;
     } else {
       // %95-98: Çok minimum ilerleme (0.05-0.3%)
       increment = Math.random() * 0.25 + 0.05;
