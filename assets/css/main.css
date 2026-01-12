@@ -1640,9 +1640,9 @@ header {
 }
 
 .btn-upload {
-    position: absolute;
-    bottom: -120px;
-    right: 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
     background: #d4ff20;
     color: #0a0f0d;
     border: none;
@@ -11513,8 +11513,10 @@ label {
 }
 
 .navbar-nav {
-  gap: 7rem;
+  gap: 2rem;
   position: relative;
+  justify-content: flex-end;
+  margin-left: auto;
 }
 
 @media screen and (max-width: 1199px) {
@@ -11526,6 +11528,8 @@ label {
 @media screen and (max-width: 991px) {
   .navbar-nav {
     gap: 0rem;
+    justify-content: center;
+    margin-left: 0;
   }
 }
 
