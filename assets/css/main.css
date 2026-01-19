@@ -1804,7 +1804,7 @@ header {
     .image-gallery .image-cards-row {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 30px;
         order: 1;
     }
     
@@ -1843,7 +1843,7 @@ header {
         width: 100%;
         justify-content: center;
     }
-}
+
 
 /* Animated marquee banner at the bottom */
 .marquee-banner {
