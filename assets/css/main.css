@@ -13807,6 +13807,6 @@ main {
 
 @media screen and (max-width: 767px) {
   .row-gap-md-1 {
-    row-gap: 0.25rem;
+    row-gap: 0.125 rem;
   }
 }
