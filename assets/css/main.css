@@ -11607,6 +11607,7 @@ label {
   top: 0;
   left: 0;
   right: 0;
+  
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -11624,7 +11625,7 @@ label {
 
 /* Ana içerik için üstten boşluk - navbar'ın altında kalması için */
 main {
-  padding-top: 0;
+  padding-top: -10;
 }
 
 @media screen and (max-width: 991px) {
