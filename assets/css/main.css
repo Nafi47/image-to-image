@@ -1804,7 +1804,7 @@ header {
     .image-gallery .image-cards-row {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 15px;
         order: 1;
     }
     
@@ -1820,16 +1820,14 @@ header {
     
     .image-gallery .arrow-curve {
         order: 0;
-        display: block;
-        position: static;
-        margin: 0 auto;
-        transform: none;
-        width: 100%;
-        max-width: 120px;
     }
     
     .image-gallery .gallery-actions {
         order: 2;
+
+      .arrow-curve {
+        display: none;
+      }
     }
 
     .btn-upload {
