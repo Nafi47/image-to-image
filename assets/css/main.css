@@ -1652,10 +1652,11 @@ header {
 
 .arrow-curve {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
+
+    top: -20px;
+    right: 200px;
+    width: 300px;
+
     height: 200px;
     pointer-events: none;
     z-index: 10;
@@ -13909,25 +13910,17 @@ main {
     accent-color: hsl(var(--base));
   }
 
+
+}/* Fix top whitespace (injected) */
+html, body { margin: 0 !important; padding: 0 !important; }
+header, .header, .site-header, #header, .topbar, .banner-section, .hero, .main-header, .page-header {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+main, .main {
+  padding-top: 0 !important;
+}
+.banner-section, .banner-section .container {
+  padding-top: 0 !important;
 }
 
-/* Custom responsive row gap for banner on mobile */
-@media screen and (max-width: 991px) {
-  .row-gap-md-2 {
-    row-gap: 1rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .row-gap-md-1 {
-    row-gap: 0rem;
-  }
-  
-  .banner-section__content p {
-    padding: 0.5rem 0 0.8rem;
-  }
-  
-  .banner-section__content h1 {
-    margin-bottom: 0.5rem;
-  }
-}

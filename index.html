@@ -11,7 +11,13 @@
     <!-- Title -->
     <title> AK - AI </title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.ico">    # Lokal bilgisayarınızda (bu klasörde):
+    git add .
+    git commit -m "Backend API proxy eklendi"
+    git push
+    
+    # EC2'de:
+    git pull
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Swiper -->
@@ -59,39 +65,47 @@
     
     <main>
 
-           <section class="banner-section ">
+        <section class="banner-section ">
             <div class="container">
-                <!-- Logo -->
-                <div class="mb-4">
+                 <div class="mb-4">
                     <a href="index.html">
                         <img src="assets/images/logo/logo.svg" alt="logo" style="height: 100px;">
                     </a>
                 </div>
-                <!-- End Logo -->
-                <div class="row row-gap-5 row-gap-md-">
+
+                <div class="row row-gap-4">
+
                     <div class="col-lg-6 align-self-center">
                         <div class="banner-section__content">
-                            <h1 class="right-reveal">  <span>AK AI YAPAY ZEKA </span> FOTOĞRAF OLUŞTURUCU </h1>
+                            <h1 class="right-reveal"> AK <span>AI YAPAY ZEKA</span> FOTĞRAF OLUŞTURUCU </h1>
                             <p class="right-reveal">
-                              Yapay zeka kullanarak Cumhurbaşkanımız Recep Tayyip Erdoğan ile fotoğraflarınızı oluşturun ve paylaşın
+                                 Yapay zeka kullanarak Cumhurbaşkanımız Recep Tayyip Erdoğan ile fotoğraflarınızı oluşturun ve paylaşın
                             </p>
-                       
+
+                                <div
+                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-4 right-reveal">
+                                <a href="#generate-section" class="btn btn--base">
+                                    Fotoğraf Oluştur
+                                    <i class="flaticon-right-arrow"></i>
+                                </a>
+                             
+                            </div>
+
                         </div>
                     </div>
-                    <div class="col-lg-3 align-self-center">
+                    <div class="col-lg-6 align-self-center">
                         <div class="position-relative ms-xl-5">
                             <div class="shape-2"></div>
-                            <div class="hero-images-grid">
-                                <div class="hero-image-card">
-                                    <div class="hero-image-wrapper">
-                                        <img src="assets/images/portfolio/kullan/kullan2.png" alt="Örnek fotoğraf 1" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="hero-image-card">
-                                    <div class="hero-image-wrapper">
-                                        <img src="assets/images/portfolio/kullan/kullan6.png" alt="Örnek fotoğraf 2" class="img-fluid">
-                                    </div>
-                                </div>
+                            <div class="banner-section__img">
+                                <figure class="image-effect right-reveal">
+                                    <img src="assets/images/portfolio/kullan/kullan3.png" alt="banner images" class="img-fluid w-100">
+                                </figure>
+                                <figure class="image-effect left-reveal">
+                                    <img src="assets/images/portfolio/kullan/kullan2.png" alt="banner images" class="img-fluid w-100">
+                                </figure>
+                                <figure class="image-effect top-reveal">
+                                    <img src="assets/images/portfolio/kullan/kullan6.2.png" alt="banner images" class="img-fluid w-100">
+                                </figure>
                             </div>
                         </div>
                     </div>
@@ -106,6 +120,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- ===========================
         =====>> Banner <<======= -->
           <section id="generate-section" class="generate-image-section section-two-bg py-120">
@@ -120,7 +136,7 @@
                 <section class="left-section">
                     <h2 class="main-title">Yapay Zeka ile<br>yeni fotoğraflar oluşturun</h2>
                     <p class="description">
-Stilinizi seçin, fotoğrafınızı hemen yükleyin. Ardından yeni oluşturulan fotoğrafını indirip ve paylaşabilirsiniz.
+Stilinizi seçin,fotoğrafınızı hemen yükleyin.Ardından yeni oluşturulan fotoğrafını indirip ve paylaşabilirsiniz.
 
                     </p>
                 </section>
@@ -128,14 +144,25 @@ Stilinizi seçin, fotoğrafınızı hemen yükleyin. Ardından yeni oluşturulan
                 <!-- Right Section -->
                 <section class="right-section">
                     <div class="image-gallery">
-                        <div class="image-cards-row">
-                            <div class="image-card card-1">
-                                <img src="assets/images/portfolio/kullan/kullan5.png" alt="Default Image" class="img-fluid w-100 h-100" style="object-fit: cover;" data-hero-preview>
-                            </div>
-                            <div class="arrow-curve">
-                                <svg viewBox="0 0 200 200" fill="none">
-                                    <path d="M10 10 Q 100 10, 100 100 T 190 190" stroke="#c4ff00" stroke-width="3" fill="none"/>
-                                    <path d="M190 190 L 180 180 M 190 190 L 180 200" stroke="#c4ff00" stroke-width="3" stroke-linecap="round"/>
+
+                        <div class="image-card card-1">
+                            <img src="assets/images/portfolio/kullan/kullan5.png" alt="Default Image" class="img-fluid w-100 h-100" style="object-fit: cover;" data-hero-preview>
+                        </div>
+     <div class="arrow-curve">
+    <svg viewBox="-200 0 200 200" fill="none">
+        <path d="M 40 10 Q -50 10, -50 100 T -140 190" stroke="#c4ff00" stroke-width="3" fill="none"/>
+        
+        <path d="M -140 190 L -130 180 M -140 190 L -130 200" stroke="#c4ff00" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+</div>
+                        <div class="image-card card-2">
+                            <img src="assets/images/portfolio/myman.png" alt="Default Image" class="img-fluid w-100 h-100" style="object-fit: cover;" data-hero-preview>
+                        </div>
+                        <div class="gallery-actions d-flex flex-wrap gap-3 align-items-center">
+                            <button class="btn-upload d-inline-flex align-items-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
                                 </svg>
                             </div>
                             <div class="image-card card-2">
@@ -302,7 +329,7 @@ Stilinizi seçin, fotoğrafınızı hemen yükleyin. Ardından yeni oluşturulan
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     data-bs-parent="#accordionWorking">
                                     <div class="accordion-body">
-                                        <p>Uygulamanın kullanım yoğunluğuna göre değişmekle birlikte yeni fotoğraf üretim süreci birkaç saniye kadar sürecektir.Yeni fotoğraf oluşturulduktan sonra indirim ve paylaşım işlemi yapabilirsiniz,</p>
+                                        <p>Uygulamanın kullanım yoğunluğuna göre değişmekle birlikte yeni fotoğraf üretim süreci birkaç saniye kadar sürecektir.Yeni fotoğraf oluşturulduktan sonra indirim ve paylaşım işlemi yapabilirsiniz.</p>
                                     </div>
                                 </div>
                             </div>
@@ -382,35 +409,32 @@ Stilinizi seçin, fotoğrafınızı hemen yükleyin. Ardından yeni oluşturulan
                 </div>
             </div>
         </section>
-                <section class="about-section section-two-bg py-120">
+          <section class="about-section section-two-bg py-120">
             <div class="container">
-                <div class="row row-gap-5">
+                <div class="row row-gap-4">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="about-section__img">
+                            <div class="image-one">
+                                <figure class="image-effect right-reveal">
+                                    <img src="assets/images/portfolio/kullan/kullan7.png" alt="about images" class="img-fluid w-100">
+                                </figure>
+                            </div>
+                           <div class="image-one">
+                                <figure class="image-effect right-reveal">
+                                    <img src="assets/images/portfolio/kullan/kullan5.png" alt="about images" class="img-fluid w-100">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-6 align-self-center">
                         <div class="about-section__content">
                             <div class="section-title">
                                 <span class="sub-title right-reveal">Hakkımızda</span>
                                 <h2 class="right-reveal">AK AI FOTOĞRAF OLUŞTURUCU.</h2>
                                 <p class="right-reveal">AK AI,kendi fotoğrafınızı yüklediğinizde sizi Genel Başkanımız ve Cumhurbaşkanımız Recep Tayyip Erdoğan'ın olduğu bir fotoğrafa kusursuz biçimde yerleştiren yeni nesil bir yapay zeka fotoğraf oluşturma platformudur.AK Parti Gençlik Kolları tarafından geliştirilen AK AI ile liderimizle beraber olduğunuz kareler üretebilirsiniz
-                                    <br>
-                                  
+                                    
+                                   
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 align-self-center">
-                        <div class="position-relative ms-xl-5">
-                            <div class="shape-2"></div>
-                            <div class="hero-images-grid">
-                                <div class="hero-image-card">
-                                    <div class="hero-image-wrapper">
-                                        <img src="assets/images/portfolio/kullan/kullan3.png" alt="Örnek fotoğraf 1" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="hero-image-card">
-                                    <div class="hero-image-wrapper">
-                                        <img src="assets/images/portfolio/kullan/kullan7.png" alt="Örnek fotoğraf 2" class="img-fluid">
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
