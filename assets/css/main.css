@@ -6300,13 +6300,13 @@ label {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 200px 0 120px;
+  padding: 0 0 120px;
   position: relative;
 }
 
 @media screen and (max-width: 767px) {
   .banner-section {
-    padding: 130px 0 80px;
+    padding: 0 0 80px;
   }
 }
 
@@ -11624,12 +11624,12 @@ label {
 
 /* Ana içerik için üstten boşluk - navbar'ın altında kalması için */
 main {
-  padding-top: 94px;
+  padding-top: 0;
 }
 
 @media screen and (max-width: 991px) {
   main {
-    padding-top: 56px;
+    padding-top: 0;
   }
 }
 
