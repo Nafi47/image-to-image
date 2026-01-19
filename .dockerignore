@@ -1,0 +1,17 @@
+# Exclude development and editor files from the image
+.git
+.gitignore
+.vscode
+.DS_Store
+
+# Compose and Docker files should not be copied into the runtime image
+Dockerfile
+docker-compose.yml
+
+# Logs and envs
+*.log
+npm-debug.log
+.env
+
+# Node modules (if present in future)
+node_modules/
