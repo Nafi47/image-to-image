@@ -7327,7 +7327,7 @@ label {
 
 @media screen and (max-width: 767px) {
   .generate-image-section .gallery-actions {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     justify-content: center !important;
     align-items: center !important;
   }
