@@ -7338,6 +7338,12 @@ label {
   }
   
   .generate-image-section .style-carousel-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 15px;
+  }
+  
+  .generate-image-section .style-carousel {
     width: 100%;
   }
 }
