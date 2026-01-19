@@ -13805,8 +13805,8 @@ main {
   }
 }
 
-@media screen and (max-width: 576px) {
-  .row-gap-sm-1 {
-    row-gap: 0.5rem;
+@media screen and (max-width: 767px) {
+  .row-gap-md-1 {
+    row-gap: 0.25rem;
   }
 }
