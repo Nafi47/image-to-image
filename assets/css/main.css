@@ -1839,7 +1839,7 @@ header {
     .image-gallery .image-cards-row {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 30px;
         order: 0;
     }
     
@@ -1860,11 +1860,11 @@ header {
     }
     
     .image-gallery .style-column {
-        order: 2;
+        order: 1;
     }
     
     .image-gallery .upload-column {
-        order: 1;
+        order: 2;
     }
     
     .image-gallery .card-2 {
