@@ -6306,7 +6306,7 @@ label {
 
 @media screen and (max-width: 767px) {
   .banner-section {
-    padding: 0 0 80px;
+    padding: 0 0 40px;
   }
 }
 
@@ -11607,7 +11607,7 @@ label {
   top: 0;
   left: 0;
   right: 0;
-  
+
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -13796,4 +13796,11 @@ main {
     accent-color: hsl(var(--base));
   }
 
+}
+
+/* Custom responsive row gap for banner on mobile */
+@media screen and (max-width: 991px) {
+  .row-gap-md-2 {
+    row-gap: 1rem;
+  }
 }
