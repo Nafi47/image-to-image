@@ -13809,4 +13809,12 @@ main {
   .row-gap-md-1 {
     row-gap: 0rem;
   }
+  
+  .banner-section__content p {
+    padding: 0.5rem 0 0.8rem;
+  }
+  
+  .banner-section__content h1 {
+    margin-bottom: 0.5rem;
+  }
 }
