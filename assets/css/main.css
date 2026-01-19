@@ -7327,9 +7327,18 @@ label {
 
 @media screen and (max-width: 767px) {
   .generate-image-section .gallery-actions {
-    flex-direction: column;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .generate-image-section .gallery-actions .btn-upload {
+    width: 100%;
     justify-content: center;
-    align-items: center;
+  }
+  
+  .generate-image-section .style-carousel-container {
+    width: 100%;
   }
 }
 
