@@ -11,13 +11,7 @@
     <!-- Title -->
     <title> AK - AI </title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.ico">    # Lokal bilgisayarınızda (bu klasörde):
-    git add .
-    git commit -m "Backend API proxy eklendi"
-    git push
-    
-    # EC2'de:
-    git pull
+    <link rel="shortcut icon" href="assets/images/logo/favicon.ico">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Swiper -->
@@ -32,8 +26,6 @@
     <link rel="stylesheet" href="assets/css/hero-images.css">
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- Responsive Fix -->
-    <link rel="stylesheet" href="assets/css/responsive-fix.css">
 
 </head>
 
@@ -45,9 +37,9 @@
         <div id="text">
             <p>A</p>
             <p>K</p>
-            <p class="active">A</p>
+             <p class="active">A</p>
             <p class="active">I</p>
-
+           
         </div>
     </div>
     <!-- =====>> End Preloader <<=====
@@ -63,34 +55,37 @@
     <!-- =====>> End Scroll back to top <<===== 
     =========================== -->
     
+
+    
     <main>
 
-        <section class="banner-section ">
+ <section class="banner-section ">
             <div class="container">
-                 <div class="mb-4">
-                    <a href="index.html">
-                        <img src="assets/images/logo/logo.svg" alt="logo" style="height: 100px;">
-                    </a>
-                </div>
-
-                <div class="row row-gap-4">
-
+               
+                <div class="row row-gap-5">
+                  <div class="footer-widget__item text-center text-lg-start">
+                            <a href="index.html" class="d-inline-block">
+                                <img src="assets/images/logo/logo.svg" alt="logo" style="width: 50%; max-width: 300%;">
+                            </a>
+                            <br>
+                           
+                        </div>
+                  
                     <div class="col-lg-6 align-self-center">
                         <div class="banner-section__content">
-                            <h1 class="right-reveal"> AK <span>AI YAPAY ZEKA</span> FOTĞRAF OLUŞTURUCU </h1>
+                            
+                            <h1 class="right-reveal">  <span>AK AI YAPAY ZEKA </span> FOTOĞRAF OLUŞTURUCU </h1>
                             <p class="right-reveal">
-                                 Yapay zeka kullanarak Cumhurbaşkanımız Recep Tayyip Erdoğan ile fotoğraflarınızı oluşturun ve paylaşın
+                              Yapay zeka kullanarak Cumhurbaşkanımız Recep Tayyip Erdoğan ile  fotoğraflarınızı oluşturun ve paylaşın.
                             </p>
-
-                                <div
+                            <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-4 right-reveal">
-                                <a href="#generate-section" class="btn btn--base">
+                               <a href="#generate-section" class="btn btn--base">
                                     Fotoğraf Oluştur
                                     <i class="flaticon-right-arrow"></i>
                                 </a>
-                             
+                               
                             </div>
-
                         </div>
                     </div>
                     <div class="col-lg-6 align-self-center">
@@ -109,23 +104,14 @@
                             </div>
                         </div>
                     </div>
-                         <div
-                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-4 right-reveal">
-                                <a href="#generate-section" class="btn btn--base">
-                                    Fotoğraf Oluştur
-                                    <i class="flaticon-right-arrow"></i>
-                                </a>
-                             
-                            </div>
                 </div>
             </div>
         </section>
-
-
         <!-- ===========================
         =====>> Banner <<======= -->
           <section id="generate-section" class="generate-image-section section-two-bg py-120">
-  <div class="container">
+    <div class="container">
+        <div class="shape-2"></div>
         <!-- Header -->
        
 
@@ -136,25 +122,27 @@
                 <section class="left-section">
                     <h2 class="main-title">Yapay Zeka ile<br>yeni fotoğraflar oluşturun</h2>
                     <p class="description">
-Stilinizi seçin,fotoğrafınızı hemen yükleyin.Ardından yeni oluşturulan fotoğrafını indirip ve paylaşabilirsiniz.
+             Stilinizi seçin,fotoğrafınızı hemen yükleyin. Ardından yeni oluşturulan fotoğrafını indirip ve paylaşabilirsiniz.
 
                     </p>
                 </section>
 
                 <!-- Right Section -->
-                <section class="right-section">
+             <section class="right-section">
                     <div class="image-gallery">
-
                         <div class="image-card card-1">
                             <img src="assets/images/portfolio/kullan/kullan5.png" alt="Default Image" class="img-fluid w-100 h-100" style="object-fit: cover;" data-hero-preview>
                         </div>
-     <div class="arrow-curve">
-    <svg viewBox="-200 0 200 200" fill="none">
-        <path d="M 40 10 Q -50 10, -50 100 T -140 190" stroke="#c4ff00" stroke-width="3" fill="none"/>
-        
-        <path d="M -140 190 L -130 180 M -140 190 L -130 200" stroke="#c4ff00" stroke-width="3" stroke-linecap="round"/>
-    </svg>
-</div>
+                        <div class="arrow-curve">
+                            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g transform="translate(300 0) scale(-1 1)">
+                                                                    <!-- Parabolic (quadratic) arc: start at left, peak at top center, end at right -->
+                                                                      <path d="M0 180 Q 100 10 300 180" stroke="#c4ff00" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                      <!-- Arrow head matching new end point -->
+                                                                      <path d="M300 180 L 300 130 M 300 180 L 250 190" stroke="#c4ff00" stroke-width="3" stroke-linecap="round"/>
+                                                                </g>
+                            </svg>
+                        </div>
                         <div class="image-card card-2">
                             <img src="assets/images/portfolio/myman.png" alt="Default Image" class="img-fluid w-100 h-100" style="object-fit: cover;" data-hero-preview>
                         </div>
@@ -162,14 +150,9 @@ Stilinizi seçin,fotoğrafınızı hemen yükleyin.Ardından yeni oluşturulan f
                             <button class="btn-upload d-inline-flex align-items-center">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
                                 </svg>
-                            </div>
-                            <div class="image-card card-2">
-                                <img src="assets/images/portfolio/myman.png" alt="Default Image" class="img-fluid w-100 h-100" style="object-fit: cover;" data-hero-preview>
-                            </div>
-                        </div>
-                        <div class="style-column">
+                                Görselinizi Yükleyin
+                            </button>
                             <div class="style-carousel-container">
                                 <button class="carousel-arrow carousel-prev" type="button">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -220,18 +203,11 @@ Stilinizi seçin,fotoğrafınızı hemen yükleyin.Ardından yeni oluşturulan f
                                 </div>
                             </div>
                         </div>
-                        <div class="upload-column">
-                            <button class="btn-upload d-inline-flex align-items-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Görselinizi Yükleyin
-                            </button>
-                        </div>
                     </div>
                 </section>
             </div>
         </main>
+         <div></div>
     </div>
 
         </section>
@@ -329,7 +305,7 @@ Stilinizi seçin,fotoğrafınızı hemen yükleyin.Ardından yeni oluşturulan f
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     data-bs-parent="#accordionWorking">
                                     <div class="accordion-body">
-                                        <p>Uygulamanın kullanım yoğunluğuna göre değişmekle birlikte yeni fotoğraf üretim süreci birkaç saniye kadar sürecektir.Yeni fotoğraf oluşturulduktan sonra indirim ve paylaşım işlemi yapabilirsiniz.</p>
+                                        <p>Uygulamanın kullanım yoğunluğuna göre değişmekle birlikte yeni fotoğraf üretim süreci birkaç saniye kadar sürecektir.Yeni fotoğraf oluşturulduktan sonra indirim ve paylaşım işlemi yapabilirsiniz,</p>
                                     </div>
                                 </div>
                             </div>
@@ -409,19 +385,23 @@ Stilinizi seçin,fotoğrafınızı hemen yükleyin.Ardından yeni oluşturulan f
                 </div>
             </div>
         </section>
-          <section class="about-section section-two-bg py-120">
+
+
+
+
+  <section class="about-section section-two-bg py-120">
             <div class="container">
                 <div class="row row-gap-4">
                     <div class="col-lg-6 align-self-center">
                         <div class="about-section__img">
                             <div class="image-one">
                                 <figure class="image-effect right-reveal">
-                                    <img src="assets/images/portfolio/kullan/kullan7.png" alt="about images" class="img-fluid w-100">
+                                    <img src="assets/images/portfolio/kullan/kullan5.png" alt="about images" class="img-fluid w-100">
                                 </figure>
                             </div>
-                           <div class="image-one">
+ <div class="image-one">
                                 <figure class="image-effect right-reveal">
-                                    <img src="assets/images/portfolio/kullan/kullan5.png" alt="about images" class="img-fluid w-100">
+                                    <img src="assets/images/portfolio/kullan/kullan7.png" alt="about images" class="img-fluid w-100">
                                 </figure>
                             </div>
                         </div>
@@ -432,12 +412,13 @@ Stilinizi seçin,fotoğrafınızı hemen yükleyin.Ardından yeni oluşturulan f
                                 <span class="sub-title right-reveal">Hakkımızda</span>
                                 <h2 class="right-reveal">AK AI FOTOĞRAF OLUŞTURUCU.</h2>
                                 <p class="right-reveal">AK AI,kendi fotoğrafınızı yüklediğinizde sizi Genel Başkanımız ve Cumhurbaşkanımız Recep Tayyip Erdoğan'ın olduğu bir fotoğrafa kusursuz biçimde yerleştiren yeni nesil bir yapay zeka fotoğraf oluşturma platformudur.AK Parti Gençlik Kolları tarafından geliştirilen AK AI ile liderimizle beraber olduğunuz kareler üretebilirsiniz
-                                    
-                                   
+
                                 </p>
+                           
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
