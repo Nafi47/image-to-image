@@ -1582,12 +1582,82 @@ header {
 /* Ensure gallery actions span both grid columns and are centered under both images */
 .image-gallery .gallery-actions {
   grid-column: 1 / -1;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   gap: 1rem;
   position: relative;
   z-index: 30;
+  padding-top: 12px;
+}
+
+/* place style chooser under left image, upload under right image on wider screens */
+.image-gallery .gallery-actions > .action-left {
+  grid-column: 1;
+  justify-self: center;
+}
+.image-gallery .gallery-actions > .action-right {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.image-gallery .gallery-actions > .action-left .style-carousel-container {
+  display: flex;
+  justify-content: center;
+}
+.image-gallery .gallery-actions > .action-right .btn-upload {
+  display: inline-flex;
+}
+
+/* Desktop-specific: ensure style button is centered under the LEFT image
+   and upload button centered under the RIGHT image. Use a strong selector
+   so Bootstrap utility classes don't override it. */
+@media (min-width: 992px) {
+  .image-gallery .gallery-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    align-items: center !important;
+    justify-items: center !important;
+    gap: 1rem !important;
+    padding-top: 18px !important;
+  }
+
+  .image-gallery .gallery-actions > .style-carousel-container {
+    grid-column: 1 !important;
+    justify-self: center !important;
+    width: min(360px, 90%) !important;
+    max-width: 420px !important;
+  }
+
+  .image-gallery .gallery-actions > .btn-upload {
+    grid-column: 2 !important;
+    justify-self: center !important;
+    width: min(360px, 90%) !important;
+    max-width: 420px !important;
+  }
+}
+
+/* Fix: keep upload button horizontal on desktop (prevent text wrap/vertical stacking) */
+@media (min-width: 992px) {
+  .image-gallery .gallery-actions > .btn-upload {
+    width: auto !important;
+    max-width: 420px !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 28px !important;
+    font-size: 15px !important;
+    line-height: 1 !important;
+  }
+
+  /* ensure style chooser stays centered and doesn't overlap */
+  .image-gallery .gallery-actions > .style-carousel-container {
+    width: auto !important;
+    max-width: 520px !important;
+    padding: 0 !important;
+  }
 }
 
 .image-card {
@@ -1652,8 +1722,8 @@ header {
 
 .btn-upload {
   position: absolute;
-  bottom: 20px;
-  right: 40px;
+  bottom: 10px;
+  right: 10px;
     background: #d4ff20;
     color: #0a0f0d;
     border: none;
