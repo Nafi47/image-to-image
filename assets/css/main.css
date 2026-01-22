@@ -1885,7 +1885,7 @@ header {
     .arrow-curve {
       /* show a compact arrow on mobile, positioned between the two images */
       display: block;
-      top: -10px;
+      top: 100px;
       right: auto;
       left: 50%;
       transform: translateX(-22%) scale(0.9);
