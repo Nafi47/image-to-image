@@ -1883,7 +1883,16 @@ header {
     }
 
     .arrow-curve {
-        display: none;
+      /* show a compact arrow on mobile, positioned between the two images */
+      display: block;
+      top: -60px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-22%) scale(0.9);
+      width: 280px;
+      height: 160px;
+      pointer-events: none;
+      z-index: 60;
     }
 
     .btn-upload {
