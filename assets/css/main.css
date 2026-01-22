@@ -1799,10 +1799,14 @@ header {
         font-size: 36px;
     }
 
-    .image-gallery {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+  /* Keep two small columns for the two images on most mobiles so buttons can sit under both */
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 720px; /* restrict gallery width and center it */
+    margin: 0 auto;
+    padding: 12px;
+  }
 
     .card-2, .card-3 {
         margin-top: 0;
@@ -1817,6 +1821,37 @@ header {
         margin-top: 20px;
         width: 100%;
         justify-content: center;
+    }
+
+    /* Make gallery-actions span and center underneath the two images */
+    .image-gallery .gallery-actions {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 8px 0 16px;
+    }
+
+    /* Place style chooser above upload button */
+    .image-gallery .style-carousel-container {
+      order: -1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-gallery .style-carousel-track {
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .image-gallery .style-thumb-btn {
+      min-width: 50%;
+      max-width: 520px;
+      width: calc(100% - 40px);
     }
 }
 
