@@ -1579,6 +1579,17 @@ header {
     padding: 20px;
 }
 
+/* Ensure gallery actions span both grid columns and are centered under both images */
+.image-gallery .gallery-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 30;
+}
+
 .image-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
