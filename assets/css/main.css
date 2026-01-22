@@ -1885,12 +1885,12 @@ header {
     .arrow-curve {
       /* show a compact arrow on mobile, positioned between the two images */
       display: block;
-      top: -80px;
+      top: -50px;
       right: auto;
-      left: 70;
+      left: 70%;
       transform: translateX(-22%) scale(0.9);
       width: 280px;
-      height: 250px;
+      height: 160px;
       pointer-events: none;
       z-index: 60;
     }
