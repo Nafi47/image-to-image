@@ -13927,38 +13927,7 @@ main {
     padding: 0.6rem 0.8rem !important;
     border-radius: 12px !important;
   }
-
-  /* show arrows on mobile and position them beside the style carousel */
-  .style-carousel-container {
-    position: relative !important;
-  }
-
-  .carousel-arrow {
-    display: flex !important;
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 48px !important;
-    height: 48px !important;
-    border-radius: 999px !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: rgba(0,0,0,0.35) !important;
-    border: 1px solid rgba(255,255,255,0.06) !important;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.4) !important;
-    color: hsl(var(--white)) !important;
-    z-index: 40 !important;
-  }
-
-  .carousel-prev {
-    left: -22px !important;
-  }
-
-  .carousel-next {
-    right: -22px !important;
-  }
-
-  .carousel-pagination {
-    display: none !important;
+  .carousel-arrow, .carousel-pagination {
+    display: none !important; /* hide navigation on narrow screens */
   }
 }
