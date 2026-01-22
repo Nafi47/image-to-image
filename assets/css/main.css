@@ -1887,10 +1887,10 @@ header {
       display: block;
       top: -80px;
       right: auto;
-      left: 50%;
+      left: 100;
       transform: translateX(-22%) scale(0.9);
       width: 280px;
-      height: 160px;
+      height: 250px;
       pointer-events: none;
       z-index: 60;
     }
